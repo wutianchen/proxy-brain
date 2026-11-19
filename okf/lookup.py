@@ -44,10 +44,11 @@ Usage:
 import argparse
 import contextlib
 import json
-import os
 import re
 import sys
 from pathlib import Path
+
+from okf.bundle_paths import concept_id_from_path
 
 CACHE_VERSION = 1
 
@@ -68,7 +69,7 @@ def _parse_md(path: Path, bundle_dir: Path) -> dict | None:
         return None
 
     rel = path.relative_to(bundle_dir)
-    concept_id = str(rel.with_suffix("")).replace(os.sep, "/")
+    concept_id = concept_id_from_path(rel)
 
     return {
         "type":        raw["type"],

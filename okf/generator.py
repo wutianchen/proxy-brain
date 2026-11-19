@@ -74,6 +74,7 @@ from tqdm import tqdm
 
 from okf import manifest_scanner
 from okf._walk import MAX_PARALLEL_WORKERS, MAX_WORKERS, walk_dirs, walk_files
+from okf.bundle_paths import concept_file_name, concept_path
 from okf.enrich._llm_prompts import DEEP_ENRICH_PROMPT, ENRICH_PROMPT, RELATED_PROMPT, SECURITY_PROMPT
 from okf.frontmatter import dump_frontmatter
 from okf.ignore import load_patterns
@@ -427,7 +428,8 @@ def render_dir_index(
                 continue
             lines.append(f"## {_plural(ctype)}\n")
             for c in sorted(group, key=lambda x: x.title.lower()):
-                filename = c.concept_id.split("/")[-1] + ".md"
+                # A link target is a URL: the '%' of an escaped file name is escaped again.
+                filename = concept_file_name(c.concept_id).replace("%", "%25")
                 desc = f" — {c.description}" if c.description else ""
                 lines.append(f"- [{c.title}]({filename}){desc}")
             lines.append("")
@@ -1209,9 +1211,7 @@ def _concept_output_path(concept: Concept, output_dir: Path) -> Path:
     Rejects absolute or ``..``-containing segments so a crafted concept_id
     cannot escape the bundle directory.
     """
-    from .update import _concept_output_path as _path_for_id
-
-    return _path_for_id(concept.concept_id, output_dir)
+    return concept_path(concept.concept_id, output_dir)
 
 
 def write_bundle(

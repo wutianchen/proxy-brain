@@ -34,7 +34,6 @@ Usage:
 
 import json
 import logging
-import os
 import re
 import sys
 import time
@@ -43,6 +42,8 @@ from pathlib import Path
 
 import yaml
 from tqdm import tqdm
+
+from okf.bundle_paths import concept_id_from_path
 
 log = logging.getLogger("okf_pairs")
 
@@ -138,7 +139,7 @@ def load_bundle(bundle_dir: Path) -> list[dict]:
             continue
         # set concept_id from path relative to bundle_dir (no .md extension)
         rel = md_file.relative_to(bundle_dir)
-        concept["concept_id"] = str(rel.with_suffix("")).replace(os.sep, "/")
+        concept["concept_id"] = concept_id_from_path(rel)
         concepts.append(concept)
 
     if skipped:

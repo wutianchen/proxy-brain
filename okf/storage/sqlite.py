@@ -1,12 +1,12 @@
 """SQLite-backed BundleStore — zero-dependency, embedded, fast."""
 import json
-import os
 import re
 import sqlite3
 import time
 from contextlib import contextmanager, suppress
 from pathlib import Path
 
+from okf.bundle_paths import concept_id_from_path
 from okf.storage.base import BundleStore
 
 SCHEMA_VERSION = 1
@@ -98,7 +98,7 @@ def _parse_concept_md(path: Path, bundle_dir: Path) -> dict | None:
     if cur_key:
         sections[cur_key] = "\n".join(cur_lines).strip()
     rel = path.relative_to(bundle_dir)
-    concept_id = str(rel.with_suffix("")).replace(os.sep, "/")
+    concept_id = concept_id_from_path(rel)
     lang = ""
     for t in fm.get("tags", []):
         if isinstance(t, str) and t.startswith("lang:") and t != "lang:manifest":
