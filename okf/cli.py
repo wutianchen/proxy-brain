@@ -42,7 +42,7 @@ def _find_skill() -> Path:
     if alt.exists():
         return alt
     from okf import __version__
-    print(f"SKILL.md not found — reinstall okf-generator (v{__version__}+)", file=sys.stderr)
+    print(f"SKILL.md not found — reinstall slim-okf-generator (v{__version__}+)", file=sys.stderr)
     sys.exit(1)
 
 
@@ -58,7 +58,7 @@ def _install_agent(agent: str):
         return True
 
     if agent == "claude":
-        target = Path.home() / ".config" / "opencode" / "skills" / "okf-generator" / "SKILL.md"
+        target = Path.home() / ".config" / "opencode" / "skills" / "slim-okf-generator" / "SKILL.md"
         if not _maybe_overwrite(target, "Claude Code skill"):
             return
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -138,12 +138,12 @@ def _install_agent(agent: str):
         if not _maybe_overwrite(target, "Continue config"):
             return
         mcp_entry = {"command": "okf", "args": ["mcp", str((root / "okf_bundle").resolve())]}
-        cfg = {"experimental": {"mcpServers": {"okf-generator": mcp_entry}}}
+        cfg = {"experimental": {"mcpServers": {"slim-okf-generator": mcp_entry}}}
         if target.exists():
             try:
                 import json as _json
                 existing = _json.loads(target.read_text())
-                existing.setdefault("experimental", {}).setdefault("mcpServers", {})["okf-generator"] = mcp_entry
+                existing.setdefault("experimental", {}).setdefault("mcpServers", {})["slim-okf-generator"] = mcp_entry
                 cfg = existing
             except Exception:
                 pass
@@ -157,12 +157,12 @@ def _install_agent(agent: str):
         rules_target = root / ".zed" / "okf.md"
         rules_target.write_text(_agent_rules("Zed"))
         mcp_entry = {"command": "okf", "args": ["mcp", str((root / "okf_bundle").resolve())]}
-        cfg = {"mcp_servers": {"okf-generator": mcp_entry}}
+        cfg = {"mcp_servers": {"slim-okf-generator": mcp_entry}}
         if target.exists():
             try:
                 import json as _json
                 existing = _json.loads(target.read_text())
-                existing.setdefault("mcp_servers", {})["okf-generator"] = mcp_entry
+                existing.setdefault("mcp_servers", {})["slim-okf-generator"] = mcp_entry
                 cfg = existing
             except Exception:
                 pass
@@ -238,7 +238,7 @@ def _install_mcp():
 def _copilot_default() -> str:
     return """# OKF Knowledge Bundle — Copilot Instructions
 
-This project uses okf-generator to produce an OKF v0.2 knowledge bundle at ./okf_bundle/.
+This project uses slim-okf-generator to produce an OKF v0.2 knowledge bundle at ./okf_bundle/.
 Every function, class, module, and dependency has a structured markdown card.
 
 ## MCP Tools (preferred)
@@ -303,7 +303,7 @@ and callees in milliseconds — faster and more accurate than reading source.
 
 HELP = """Usage: okf install [agent]
 
-Install okf-generator integration for an AI coding agent.
+Install slim-okf-generator integration for an AI coding agent.
 
 Skill installation (instructions/rules for the AI):
   claude      Install Claude Code skill (SKILL.md → ~/.config/opencode/skills/)
@@ -362,7 +362,7 @@ def print_banner():
 def main():
     if len(sys.argv) >= 2 and sys.argv[1] in {"-v", "--version"}:
         from okf import __version__
-        print(f"okf-generator v{__version__}")
+        print(f"slim-okf-generator v{__version__}")
         sys.exit(0)
 
     if len(sys.argv) < 2 or sys.argv[1] in {"-h", "--help"}:

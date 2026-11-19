@@ -1,4 +1,4 @@
-"""Shared pytest fixtures for the okf-generator test suite."""
+"""Shared pytest fixtures for the slim-okf-generator test suite."""
 
 from pathlib import Path
 

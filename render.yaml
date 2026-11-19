@@ -2,7 +2,7 @@ services:
   - type: web
     name: okf-dashboard
     runtime: docker
-    repo: https://github.com/UmairBaig8/okf-generator
+    repo: https://github.com/wutianchen/slim-okf-generator
     dockerfilePath: Dockerfile.render
     envVars:
       - key: OKF_BUNDLE_DIR

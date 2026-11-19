@@ -1,6 +1,6 @@
 # AI Agent Integration Guide
 
-`okf-generator` works with **any AI coding agent** — the output is plain markdown files that every agent can read. This guide covers setup for all major agents.
+`slim-okf-generator` works with **any AI coding agent** — the output is plain markdown files that every agent can read. This guide covers setup for all major agents.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@
 
 ## Token Efficiency
 
-| Optimization | How okf-generator helps | Agent impact |
+| Optimization | How slim-okf-generator helps | Agent impact |
 |---|---|---|
 | Deterministic types | Every concept has `type: Function`, `type: Class`, `type: Dependency` | Agent filters by type precisely |
 | Incremental access | `okf lookup <Name>` returns one concept, not whole files | Saves 80-95% token cost vs reading source |
@@ -219,7 +219,7 @@ okf install mcp         # Register MCP server (same as okf mcp --install)
 
 | Command | Files created | Effect |
 |---|---|---|
-| `okf install claude` | `~/.config/opencode/skills/okf-generator/SKILL.md` | Auto-triggers on phrases like "index my codebase" |
+| `okf install claude` | `~/.config/opencode/skills/slim-okf-generator/SKILL.md` | Auto-triggers on phrases like "index my codebase" |
 | `okf install opencode` | `.opencode/commands/lookup.md` | `/lookup NAME=<ConceptName>` |
 | `okf install copilot` | `.github/copilot-instructions.md` | Auto-loaded in VS Code |
 | `okf install cursor` | `.cursorrules` | Auto-loaded by Cursor |

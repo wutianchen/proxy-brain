@@ -340,7 +340,7 @@ Run `--dry-run` first to preview changes. The migration is idempotent — runnin
 - **Dart parser** — `okf/parsers/dart.py` extracts classes, mixins, enums, functions, constructors, methods. Fixtures at `tests/fixtures/realworld/dart/{easy,complex}/`. 3 new fixture tests.
 - **Scala parser** — `okf/parsers/scala.py` extracts classes, objects, traits (→Interface), enums, functions, methods, visibility, typed params. Fixtures at `tests/fixtures/realworld/scala/{easy,complex}/`. 3 new fixture tests.
 - **Julia parser** — `okf/parsers/julia.py` extracts functions, structs (→Class), abstract types (→Interface), constants, macros. Fixtures at `tests/fixtures/realworld/julia/{easy,complex}/`. 3 new fixture tests.
-- **Web dashboard** — `okf dashboard <bundle_dir>` launches a FastAPI-based live bundle browser. Search/filter concepts, view full detail (signature, params, docstring, source), explore interactive dependency graph per concept. API endpoints: `/api/info`, `/api/types`, `/api/languages`, `/api/search`, `/api/concept/{id}`, `/api/graph`. Optional dep: `pip install "okf-generator[dashboard]"`.
+- **Web dashboard** — `okf dashboard <bundle_dir>` launches a FastAPI-based live bundle browser. Search/filter concepts, view full detail (signature, params, docstring, source), explore interactive dependency graph per concept. API endpoints: `/api/info`, `/api/types`, `/api/languages`, `/api/search`, `/api/concept/{id}`, `/api/graph`. Optional dep: `pip install "slim-okf-generator[dashboard]"`.
 
 ### Changed
 - Language coverage expanded from 13→17 languages (added PHP, Dart, Scala, Julia).
@@ -500,7 +500,7 @@ Run `--dry-run` first to preview changes. The migration is idempotent — runnin
 ## [0.1.30] — 2026-07-02
 
 ### Changed
-- PyPI `Homepage` now points to GitHub Pages landing page (`https://umairbaig8.github.io/okf-generator/`).
+- PyPI `Homepage` now points to GitHub Pages landing page (`https://wutianchen.github.io/slim-okf-generator/`).
 - README: added 🌐 Site badge linking to landing page.
 
 ---
@@ -889,8 +889,8 @@ Run `--dry-run` first to preview changes. The migration is idempotent — runnin
 ## [0.1.7] — 2026-06-29
 
 ### Added
-- One-liner curl install: `curl -fsSL https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/scripts/install.sh | bash`
-- `scripts/install.sh` — installs okf-generator + Claude Code skill in one shot
+- One-liner curl install: `curl -fsSL https://raw.githubusercontent.com/wutianchen/slim-okf-generator/main/scripts/install.sh | bash`
+- `scripts/install.sh` — installs slim-okf-generator + Claude Code skill in one shot
 
 ### Changed
 - README badges fixed — test badge URL now uses correct repo case (`UmairBaig8`)
@@ -907,7 +907,7 @@ Run `--dry-run` first to preview changes. The migration is idempotent — runnin
 ## [0.1.6] — 2026-06-29
 
 ### Added
-- `okf install-skill` command — copies SKILL.md to `~/.config/opencode/skills/okf-generator/`
+- `okf install-skill` command — copies SKILL.md to `~/.config/opencode/skills/slim-okf-generator/`
 
 ---
 
@@ -987,56 +987,56 @@ Run `--dry-run` first to preview changes. The migration is idempotent — runnin
 - 32 passing tests
 
 
-[Unreleased]: https://github.com/UmairBaig8/okf-generator/compare/v0.1.53...HEAD
-[0.1.53]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.53
-[0.1.52]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.52
-[0.1.51]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.51
-[0.1.50]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.50
-[0.1.49]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.49
-[0.1.48]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.48
-[0.1.47]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.47
-[0.1.46]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.46
-[0.1.45]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.45
-[0.1.44]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.44
-[0.1.43]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.43
-[0.1.40]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.40
-[0.1.39]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.39
-[0.1.38]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.38
-[0.1.37]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.37
-[0.1.36]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.36
-[0.1.35]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.35
-[0.1.34]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.34
-[0.1.33]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.33
-[0.1.32]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.32
-[0.1.31]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.31
-[0.1.30]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.30
-[0.1.29]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.29
-[0.1.28]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.28
-[0.1.27]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.27
-[0.1.26]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.26
-[0.1.25]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.25
-[0.1.24]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.24
-[0.1.23]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.23
-[0.1.22]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.22
-[0.1.21]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.21
-[0.1.20]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.20
-[0.1.19]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.19
-[0.1.18]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.18
-[0.1.17]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.17
-[0.1.16]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.16
-[0.1.15]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.15
-[0.1.14]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.14
-[0.1.13]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.13
-[0.1.12]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.12
-[0.1.11]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.11
-[0.1.10]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.10
-[0.1.9]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.9
-[0.1.8]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.8
-[0.1.7]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.7
-[0.1.6]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.6
-[0.1.5]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.5
-[0.1.4]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.4
-[0.1.3]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.3
-[0.1.2]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.2
-[0.1.1]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.1
-[0.1.0]: https://github.com/UmairBaig8/okf-generator/releases/tag/v0.1.0
+[Unreleased]: https://github.com/wutianchen/slim-okf-generator/compare/v0.1.53...HEAD
+[0.1.53]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.53
+[0.1.52]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.52
+[0.1.51]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.51
+[0.1.50]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.50
+[0.1.49]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.49
+[0.1.48]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.48
+[0.1.47]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.47
+[0.1.46]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.46
+[0.1.45]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.45
+[0.1.44]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.44
+[0.1.43]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.43
+[0.1.40]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.40
+[0.1.39]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.39
+[0.1.38]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.38
+[0.1.37]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.37
+[0.1.36]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.36
+[0.1.35]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.35
+[0.1.34]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.34
+[0.1.33]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.33
+[0.1.32]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.32
+[0.1.31]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.31
+[0.1.30]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.30
+[0.1.29]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.29
+[0.1.28]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.28
+[0.1.27]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.27
+[0.1.26]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.26
+[0.1.25]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.25
+[0.1.24]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.24
+[0.1.23]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.23
+[0.1.22]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.22
+[0.1.21]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.21
+[0.1.20]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.20
+[0.1.19]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.19
+[0.1.18]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.18
+[0.1.17]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.17
+[0.1.16]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.16
+[0.1.15]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.15
+[0.1.14]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.14
+[0.1.13]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.13
+[0.1.12]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.12
+[0.1.11]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.11
+[0.1.10]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.10
+[0.1.9]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.9
+[0.1.8]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.8
+[0.1.7]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.7
+[0.1.6]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.6
+[0.1.5]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.5
+[0.1.4]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.4
+[0.1.3]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.3
+[0.1.2]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.2
+[0.1.1]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.1
+[0.1.0]: https://github.com/wutianchen/slim-okf-generator/releases/tag/v0.1.0

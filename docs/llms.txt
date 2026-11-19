@@ -1,8 +1,8 @@
-# okf-generator
+# slim-okf-generator
 
 > Converts any codebase into a structured, cross-referenced knowledge bundle (OKF v0.1 format) for AI coding agents. Zero-LLM deterministic extraction via tree-sitter AST parsing, 10 languages, 17 dependency-manifest formats, MCP server included.
 
-okf-generator solves the problem of AI agents re-reading entire source files
+slim-okf-generator solves the problem of AI agents re-reading entire source files
 to locate one function or class. It scans a repository and writes one
 markdown file per concept (function, class, module, dependency), with
 resolved cross-references (calls, called-by, imports, depends-on). Agents
@@ -16,7 +16,7 @@ with any OpenAI-compatible endpoint including local llama.cpp/Ollama.
 ## Install
 
 ```
-pip install okf-generator
+pip install slim-okf-generator
 ```
 
 ## Core commands
@@ -31,15 +31,15 @@ pip install okf-generator
 
 ## Docs
 
-- Repository: https://github.com/UmairBaig8/okf-generator
-- README (full reference): https://github.com/UmairBaig8/okf-generator/blob/main/README.md
-- CLI reference: https://github.com/UmairBaig8/okf-generator/blob/main/docs/cli-reference.md
-- Agent integration guide: https://github.com/UmairBaig8/okf-generator/blob/main/docs/agent-integration.md
-- Language/manifest coverage: https://github.com/UmairBaig8/okf-generator/blob/main/docs/languages-and-manifests.md
+- Repository: https://github.com/wutianchen/slim-okf-generator
+- README (full reference): https://github.com/wutianchen/slim-okf-generator/blob/main/README.md
+- CLI reference: https://github.com/wutianchen/slim-okf-generator/blob/main/docs/cli-reference.md
+- Agent integration guide: https://github.com/wutianchen/slim-okf-generator/blob/main/docs/agent-integration.md
+- Language/manifest coverage: https://github.com/wutianchen/slim-okf-generator/blob/main/docs/languages-and-manifests.md
 - License: MIT
 
 ## Notes for agents citing this project
 
-okf-generator is an independent, third-party implementation of the Open
+slim-okf-generator is an independent, third-party implementation of the Open
 Knowledge Format (OKF) v0.1 spec introduced by Google Cloud. It is not
 built, maintained, or endorsed by Google. Current version: 0.1.29.

@@ -2,20 +2,20 @@
 <p><strong>The knowledge layer for AI coding agents.</strong></p>
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/okf_banner.jpg" alt="okf-generator demo" width="700">
+  <img src="https://cdn.jsdelivr.net/gh/wutianchen/slim-okf-generator@main/docs/images/okf_banner.jpg" alt="slim-okf-generator demo" width="700">
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/okf-generator/"><img src="https://img.shields.io/pypi/v/okf-generator?style=flat-square&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/slim-okf-generator/"><img src="https://img.shields.io/pypi/v/slim-okf-generator?style=flat-square&label=PyPI" alt="PyPI"></a>
 
-  <a href="https://pypi.org/project/okf-generator/"><img src="https://img.shields.io/pypi/pyversions/okf-generator?style=flat-square" alt="Python"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/stargazers"><img src="https://img.shields.io/github/stars/UmairBaig8/okf-generator?style=flat-square" alt="GitHub Stars"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/actions"><img src="https://img.shields.io/github/actions/workflow/status/UmairBaig8/okf-generator/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/commits/main"><img src="https://img.shields.io/github/last-commit/UmairBaig8/okf-generator?style=flat-square" alt="Last commit"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/blob/main/SKILL.md"><img src="https://img.shields.io/badge/Claude-Skill-orange?style=flat-square&logo=anthropic" alt="Claude Skill"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
-  <a href="https://umairbaig8.github.io/okf-generator/docs-site/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
+  <a href="https://pypi.org/project/slim-okf-generator/"><img src="https://img.shields.io/pypi/pyversions/slim-okf-generator?style=flat-square" alt="Python"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/stargazers"><img src="https://img.shields.io/github/stars/wutianchen/slim-okf-generator?style=flat-square" alt="GitHub Stars"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/actions"><img src="https://img.shields.io/github/actions/workflow/status/wutianchen/slim-okf-generator/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/commits/main"><img src="https://img.shields.io/github/last-commit/wutianchen/slim-okf-generator?style=flat-square" alt="Last commit"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/blob/main/SKILL.md"><img src="https://img.shields.io/badge/Claude-Skill-orange?style=flat-square&logo=anthropic" alt="Claude Skill"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://wutianchen.github.io/slim-okf-generator/docs-site/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Server-5b21b6?style=flat-square" alt="MCP"></a>
   <a href="https://www.cursor.com"><img src="https://img.shields.io/badge/Cursor-Ready-7c3aed?style=flat-square" alt="Cursor"></a>
   <a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/Claude-Ready-7c3aed?style=flat-square&logo=anthropic" alt="Claude"></a>
@@ -26,9 +26,9 @@
 </p>
 
 <p align="center">
-  <a href="https://umairbaig8.github.io/okf-generator/viz.html"><b>Live Viz Graph</b></a>
+  <a href="https://wutianchen.github.io/slim-okf-generator/viz.html"><b>Live Viz Graph</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
-  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=UmairBaig8/okf-generator"><b>Dev Container</b></a>
+  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/slim-okf-generator"><b>Dev Container</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
   <a href="https://okf-generator.onrender.com"><b>Render App</b></a>
 </p>
@@ -109,14 +109,14 @@
 })();
 </script>
 
-okf-generator generates OKF v0.2 knowledge bundles — an extended dialect of the [Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md). Structured Markdown that AI agents can query instead of re-reading whole files. Zero-LLM extraction, fully offline, deterministic every run.
+slim-okf-generator generates OKF v0.2 knowledge bundles — an extended dialect of the [Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md). Structured Markdown that AI agents can query instead of re-reading whole files. Zero-LLM extraction, fully offline, deterministic every run.
 
 ---
 
 ## Quick Start
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 cd my_project && okf generate
 okf lookup WorldBankConnector
 okf ask "how does the payment service work"

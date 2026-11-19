@@ -81,5 +81,5 @@
 
   <!-- bottom hairline + tagline -->
   <line x1="60" y1="248" x2="1140" y2="248" stroke="#21262d" stroke-width="1"/>
-  <text x="60" y="268" font-size="12" fill="#6e7681">MIT licensed · OKF v0.1 conformant · pip install okf-generator</text>
+  <text x="60" y="268" font-size="12" fill="#6e7681">MIT licensed · OKF v0.1 conformant · pip install slim-okf-generator</text>
 </svg>

@@ -3,7 +3,7 @@
 ## One-liner (macOS / Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wutianchen/slim-okf-generator/main/scripts/install.sh | bash
 ```
 
 This installs the core package with all language parsers.
@@ -13,7 +13,7 @@ This installs the core package with all language parsers.
 ## pip (recommended)
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 ```
 
 Core extraction is fully offline and deterministic — no LLM, no API key, no internet required.
@@ -22,13 +22,13 @@ Core extraction is fully offline and deterministic — no LLM, no API key, no in
 
 | Extras | What you get | Command |
 |--------|-------------|---------|
-| `[llm]` | LLM enrichment (OpenAI SDK) | `pip install "okf-generator[llm]"` |
-| `[dashboard]` | Live bundle browser (FastAPI + uvicorn) | `pip install "okf-generator[dashboard]"` |
-| `[dev]` | Development tools (pytest, ruff, mkdocs) | `pip install "okf-generator[dev]"` |
+| `[llm]` | LLM enrichment (OpenAI SDK) | `pip install "slim-okf-generator[llm]"` |
+| `[dashboard]` | Live bundle browser (FastAPI + uvicorn) | `pip install "slim-okf-generator[dashboard]"` |
+| `[dev]` | Development tools (pytest, ruff, mkdocs) | `pip install "slim-okf-generator[dev]"` |
 
 **All at once:**
 ```bash
-pip install "okf-generator[llm,dashboard]"
+pip install "slim-okf-generator[llm,dashboard]"
 ```
 
 ---
@@ -36,12 +36,12 @@ pip install "okf-generator[llm,dashboard]"
 ## uv (fast alternative)
 
 ```bash
-uv pip install okf-generator
+uv pip install slim-okf-generator
 ```
 
 Or with extras:
 ```bash
-uv pip install "okf-generator[llm,dashboard]"
+uv pip install "slim-okf-generator[llm,dashboard]"
 ```
 
 ---
@@ -49,10 +49,10 @@ uv pip install "okf-generator[llm,dashboard]"
 ## Docker
 
 ```bash
-docker pull ghcr.io/umairbaig8/okf-generator/okf-generator:latest
+docker pull ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator:latest
 
 # Generate a bundle
-docker run -v "$PWD:/repo" ghcr.io/umairbaig8/okf-generator/okf-generator \
+docker run -v "$PWD:/repo" ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator \
   generate /repo/src /repo/okf_bundle
 ```
 
@@ -62,7 +62,7 @@ docker run -v "$PWD:/repo" ghcr.io/umairbaig8/okf-generator/okf-generator \
 
 ```bash
 okf --version
-# Should print: okf-generator v0.1.39
+# Should print: slim-okf-generator v0.1.39
 
 okf --help
 # Shows all available commands
@@ -100,7 +100,7 @@ You should see a concept card for `greet` with its signature, docstring, paramet
 Install via pip works on Windows, but some tree-sitter parsers require a C compiler. Use Windows Terminal + Python 3.11+:
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 ```
 
 If you encounter build errors for language parsers, install Microsoft C++ Build Tools from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
@@ -110,7 +110,7 @@ If you encounter build errors for language parsers, install Microsoft C++ Build 
 All tree-sitter wheels are available for `aarch64`. Standard pip install works:
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 ```
 
 ---

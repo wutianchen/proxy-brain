@@ -9,7 +9,7 @@ COPY pyproject.toml README.md LICENSE run_for_render.py /app/
 COPY okf /app/okf
 COPY tests/fixtures/realworld /app/tests/fixtures/realworld
 WORKDIR /app
-RUN pip install --no-cache-dir "okf-generator[dashboard]"
+RUN pip install --no-cache-dir "slim-okf-generator[dashboard]"
 
 # Generate a knowledge bundle from the realworld fixture (rich cross-references for graph demo)
 RUN okf generate tests/fixtures/realworld okf_bundle && echo "Bundle generated $(wc -l < okf_bundle/SUMMARY.md) concepts"

@@ -1,22 +1,22 @@
 # Troubleshooting
 
-Common issues and fixes, grouped by command. If your issue isn't listed, [open an issue on GitHub](https://github.com/UmairBaig8/okf-generator/issues) with your OS, Python version, and the full error output.
+Common issues and fixes, grouped by command. If your issue isn't listed, [open an issue on GitHub](https://github.com/wutianchen/slim-okf-generator/issues) with your OS, Python version, and the full error output.
 
 ## Installation
 
-### `pip install okf-generator` fails with a build error
+### `pip install slim-okf-generator` fails with a build error
 
 Usually a missing tree-sitter grammar wheel for your platform.
 
 ```bash
 pip install --upgrade pip
-pip install okf-generator --no-cache-dir
+pip install slim-okf-generator --no-cache-dir
 ```
 
 If it still fails, install without LLM extras first to isolate the problem:
 
 ```bash
-pip install okf-generator  # core only, no [llm] extra
+pip install slim-okf-generator  # core only, no [llm] extra
 ```
 
 ### `okf: command not found` after install
@@ -48,7 +48,7 @@ okf generate ./src ./bundle --verbose
 
 ### `migrations/` or SQL files are being skipped
 
-Known gotcha: some default exclude lists treat `migrations/` as a build artifact directory. If your SQL lives there and isn't showing up in the bundle, confirm your okf-generator version includes the fix (v0.1.15+), or explicitly include it:
+Known gotcha: some default exclude lists treat `migrations/` as a build artifact directory. If your SQL lives there and isn't showing up in the bundle, confirm your slim-okf-generator version includes the fix (v0.1.15+), or explicitly include it:
 
 ```bash
 okf generate ./src ./bundle --include migrations
@@ -64,10 +64,10 @@ okf generate ./src ./bundle --include migrations
 This means the installed tree-sitter grammar version doesn't match what the parser expects. Grammar APIs shift between versions. Fix:
 
 ```bash
-pip install --upgrade okf-generator
+pip install --upgrade slim-okf-generator
 ```
 
-If it persists after upgrading, [open an issue](https://github.com/UmairBaig8/okf-generator/issues) with the exact node type and language — this is a parser bug on our end, not something to work around locally.
+If it persists after upgrading, [open an issue](https://github.com/wutianchen/slim-okf-generator/issues) with the exact node type and language — this is a parser bug on our end, not something to work around locally.
 
 ## `okf lookup`
 
@@ -140,5 +140,5 @@ permissions:
 
 ## Still stuck?
 
-- Check [existing GitHub issues](https://github.com/UmairBaig8/okf-generator/issues) — many edge cases are already tracked.
+- Check [existing GitHub issues](https://github.com/wutianchen/slim-okf-generator/issues) — many edge cases are already tracked.
 - Open a new issue with: OS, Python version, `okf --version` output, the exact command run, and full error text.

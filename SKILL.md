@@ -1,5 +1,5 @@
 ---
-name: okf-generator
+name: slim-okf-generator
 description: >
   Generate OKF (Open Knowledge Format) v0.2 knowledge bundles from codebases,
   and look up exact concepts for AI agent context injection. Use this skill
@@ -44,9 +44,9 @@ All features via single `okf` CLI (installed from PyPI).
 ## Dependencies
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 # With LLM enrichment:
-pip install "okf-generator[llm]"
+pip install "slim-okf-generator[llm]"
 ```
 
 ---

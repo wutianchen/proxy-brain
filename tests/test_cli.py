@@ -35,13 +35,13 @@ def test_cli_version(capsys):
     code = _run_cli(["--version"], capsys)
     out = capsys.readouterr().out
     assert code == 0
-    assert f"okf-generator v{__version__}" in out
+    assert f"slim-okf-generator v{__version__}" in out
 
 
 def test_cli_version_short(capsys):
     code = _run_cli(["-v"], capsys)
     assert code == 0
-    assert "okf-generator v" in capsys.readouterr().out
+    assert "slim-okf-generator v" in capsys.readouterr().out
 
 
 def test_cli_help_lists_commands(capsys):

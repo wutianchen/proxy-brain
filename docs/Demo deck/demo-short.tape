@@ -77,7 +77,7 @@ Type "okf install claude"
 Sleep 150ms
 Enter
 Sleep 1.2s
-Type "pip install okf-generator"
+Type "pip install slim-okf-generator"
 Sleep 200ms
 Enter
 Sleep 1.5s

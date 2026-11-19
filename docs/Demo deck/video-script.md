@@ -1,4 +1,4 @@
-# okf-generator — Demo Video Script
+# slim-okf-generator — Demo Video Script
 
 **Format:** 60-90s screencast  
 **Tone:** Professional, fast-paced, developer-focused  
@@ -110,7 +110,7 @@ okf diff ./okf_bundle.bak ./okf_bundle --compact
 
 **Visual:**
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 okf install all
 ```
 
@@ -118,6 +118,6 @@ okf install all
 
 **VO:** "Install once, integrate with every AI coding agent. Pip install, generate your bundle, and your agent has the full picture."
 
-**Final frame:** Banner + `okf-generator` + star count box
+**Final frame:** Banner + `slim-okf-generator` + star count box
 
-**VO:** "okf-generator — the knowledge layer for AI coding agents."
+**VO:** "slim-okf-generator — the knowledge layer for AI coding agents."

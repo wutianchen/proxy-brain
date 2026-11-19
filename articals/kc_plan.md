@@ -1,4 +1,4 @@
-# okf-generator — Launch & Growth Plan
+# slim-okf-generator — Launch & Growth Plan
 
 > Created: 2026-07-07  
 > Version at time of writing: v0.1.37  
@@ -67,7 +67,7 @@ Search README.md and docs/index.html for "10 languages" and update to "13 langua
 
 **Title (use this exactly):**
 ```
-Show HN: okf-generator – turn any codebase into an agent-readable knowledge graph
+Show HN: slim-okf-generator – turn any codebase into an agent-readable knowledge graph
 ```
 
 **Post body (final version of `show-hn-draft.md` after updates):**
@@ -78,7 +78,7 @@ data connectors, ML pipelines, SQL schemas) and kept hitting the same wall:
 giving an AI agent the whole repo as context is slow and burns tokens. Local
 SLMs (Gemma, Llama, Phi) on a laptop just run out of memory entirely.
 
-okf-generator scans a repo with tree-sitter AST parsers and writes one
+slim-okf-generator scans a repo with tree-sitter AST parsers and writes one
 markdown file per function, class, module, and dependency — cross-referenced
 (calls, called-by, imports). It now supports 13 languages and ships an MCP
 server so Claude Desktop / Cursor can query the bundle directly.
@@ -105,8 +105,8 @@ A few specifics:
 - One-command agent wiring: okf install claude / cursor / copilot / windsurf
 - Interactive HTML viz (self-contained, no server): okf visualize ./bundle
 
-GitHub: https://github.com/UmairBaig8/okf-generator
-pip install okf-generator
+GitHub: https://github.com/wutianchen/slim-okf-generator
+pip install slim-okf-generator
 ```
 
 **Rules for the HN thread:**
@@ -122,7 +122,7 @@ pip install okf-generator
 **File:** `devto-draft.md` (already ~80% written)
 
 **Final steps before publishing:**
-1. Add the before/after image: `![before/after](https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/docs/images/before_after.svg)`
+1. Add the before/after image: `![before/after](https://raw.githubusercontent.com/wutianchen/slim-okf-generator/main/docs/images/before_after.svg)`
 2. Add a "Getting started in 60 seconds" section with the 3-command flow
 3. Add a "MCP server setup" section (this is new since the draft was written)
 4. Publish with tags: `ai`, `opensource`, `python`, `productivity`
@@ -149,7 +149,7 @@ I built a tool that makes local Gemma/Llama actually usable on large codebases �
 1. The problem: local models run out of context on real repos
 2. The solution: exact symbol lookup instead of whole-file reads
 3. Show the terminal output (the before/after)
-4. Link: GitHub + `pip install okf-generator`
+4. Link: GitHub + `pip install slim-okf-generator`
 5. Mention MCP server for people using Continue.dev or local agent setups
 
 **Rules:** Don't cross-post the exact same text. r/LocalLLaMA has seen enough "I built a thing" posts — lead with the problem, show the output, let the code speak.
@@ -158,7 +158,7 @@ I built a tool that makes local Gemma/Llama actually usable on large codebases �
 
 | Subreddit | Angle | Title |
 |---|---|---|
-| r/Python | CLI tool, pip install, tree-sitter | `okf-generator: tree-sitter powered code indexer for AI agents` |
+| r/Python | CLI tool, pip install, tree-sitter | `slim-okf-generator: tree-sitter powered code indexer for AI agents` |
 | r/programming | Architecture (AST → knowledge graph) | `How I turn a codebase into a queryable knowledge graph` |
 | r/MachineLearning | Token efficiency for local SLMs | `100x token reduction for local LLM code tasks — no vector DB needed` |
 | r/ClaudeAI | Claude Code integration | `okf install claude wires your entire codebase into Claude Code` |
@@ -175,12 +175,12 @@ Space these out — don't post to all subreddits on the same day.
 Your AI agent re-reads 600 lines every time it touches a function.
 That's ~14,000 tokens just to find one method signature.
 
-I built okf-generator to fix this. 🧵
+I built slim-okf-generator to fix this. 🧵
 ```
 
 **Tweet 2 (the solution):**
 ```
-okf-generator scans your repo with tree-sitter AST parsers.
+slim-okf-generator scans your repo with tree-sitter AST parsers.
 
 Every function, class, module, and dependency becomes a structured
 markdown file — cross-referenced by calls and imports.
@@ -197,11 +197,11 @@ Then your agent runs:
 13 languages. 17 manifest formats. MCP server included.
 Works with Claude Code, Cursor, Copilot, Windsurf, Cline.
 
-pip install okf-generator
+pip install slim-okf-generator
 okf install all
 
 ↓ GitHub (MIT)
-https://github.com/UmairBaig8/okf-generator
+https://github.com/wutianchen/slim-okf-generator
 ```
 
 **Who to tag:** Tag 2–3 people active in the AI tooling/local LLM space. Don't tag people randomly — only if the tool is genuinely relevant to what they post about.
@@ -248,10 +248,10 @@ These are permanent wins — they drive organic discovery indefinitely.
 
 **PR description template:**
 ```
-Add okf-generator — turns any codebase into an agent-readable knowledge
+Add slim-okf-generator — turns any codebase into an agent-readable knowledge
 graph using tree-sitter AST parsers. Zero-LLM extraction, 13 languages,
 MCP server included. MIT licensed.
-https://github.com/UmairBaig8/okf-generator
+https://github.com/wutianchen/slim-okf-generator
 ```
 
 Keep PRs small — one tool, correct section, matching the repo's existing format exactly.
@@ -266,7 +266,7 @@ These cost nothing and permanently improve discoverability:
 - [ ] Update the repo description to: *"Map any codebase into an agent-readable knowledge graph — 13 languages, MCP server, zero LLM required"*
 - [ ] Add a social preview image (Settings → Social preview → upload `docs/images/social_preview.png`)
 - [ ] Add `CITATION.cff` file for researchers who want to cite the tool
-- [ ] Make sure the website field in the repo header points to `https://umairbaig8.github.io/okf-generator/`
+- [ ] Make sure the website field in the repo header points to `https://wutianchen.github.io/slim-okf-generator/`
 
 ---
 
@@ -328,7 +328,7 @@ After the blog post is written, email these newsletters directly:
 | Pointer (programmers) | Senior devs | pointer.io — reply to any issue |
 | Console (dev tools) | Developer tools specifically | console.dev/tools |
 
-Console.dev is the highest-leverage one — it specifically covers developer tools and their audience is exactly who will use okf-generator.
+Console.dev is the highest-leverage one — it specifically covers developer tools and their audience is exactly who will use slim-okf-generator.
 
 ---
 

@@ -1,8 +1,8 @@
 # Comparison
 
-## okf-generator vs. other approaches
+## slim-okf-generator vs. other approaches
 
-| | **okf-generator** | RAG / vector search | Manual docs | LLM-only |
+| | **slim-okf-generator** | RAG / vector search | Manual docs | LLM-only |
 |---|---|---|---|---|
 | **Language coverage** | 18 languages, modular parsers | Any (embedding model dependent) | Manual | Any (context window dependent) |
 | **Extraction** | Zero-LLM, deterministic, offline | Embedding step (often cloud) | Manual authorship | Full file reading (costly) |
@@ -14,9 +14,9 @@
 | **Agent integration** | MCP, CLI, lookup cache | API-dependent | Manual | Chat interface |
 | **Training data** | Built-in JSONL generator (5 pair types) | Not typically included | Not applicable | Prompt-based |
 
-## okf-generator vs. similar tools
+## slim-okf-generator vs. similar tools
 
-| | **okf-generator** | Sourcegraph | Graphify / CodeSee | dep-graph tools |
+| | **slim-okf-generator** | Sourcegraph | Graphify / CodeSee | dep-graph tools |
 |---|---|---|---|---|
 | **Focus** | Structured knowledge bundles for AI agents | Universal code search | Visual codebase maps | Dependency visualization |
 | **Extraction** | Static AST parsing, offline | Server-side indexing | Static analysis | Package manager metadata |
@@ -31,11 +31,11 @@
 
 ### Sourcegraph
 
-Sourcegraph is a universal code search engine. It indexes your entire codebase and provides cross-references, search, and AI features (Cody). Where okf-generator produces a portable, git-friendly bundle, Sourcegraph requires a running server.
+Sourcegraph is a universal code search engine. It indexes your entire codebase and provides cross-references, search, and AI features (Cody). Where slim-okf-generator produces a portable, git-friendly bundle, Sourcegraph requires a running server.
 
 **Use Sourcegraph when:** you need always-on code search across many repositories with a web UI for human developers.
 
-**Use okf-generator when:** you need a portable knowledge bundle for AI agents, CI/CD pipelines, or offline use.
+**Use slim-okf-generator when:** you need a portable knowledge bundle for AI agents, CI/CD pipelines, or offline use.
 
 ### Graphify / CodeSee
 
@@ -43,7 +43,7 @@ Graphify and CodeSee are visual code exploration platforms. They generate intera
 
 **Use Graphify/CodeSee when:** you need visual architecture diagrams for onboarding or code review.
 
-**Use okf-generator when:** you need structured machine-readable knowledge for AI agents, not human-facing diagrams.
+**Use slim-okf-generator when:** you need structured machine-readable knowledge for AI agents, not human-facing diagrams.
 
 ### Dependency analysis tools (dep-graph, dependency-cruiser, cargo-deps)
 
@@ -51,11 +51,11 @@ These tools focus narrowly on dependency graphs from package managers. They prod
 
 **Use dep-graph tools when:** you only need package-level dependency visualization.
 
-**Use okf-generator when:** you need full knowledge bundles including function-level cross-references, call graphs, and concept lookups across multiple languages.
+**Use slim-okf-generator when:** you need full knowledge bundles including function-level cross-references, call graphs, and concept lookups across multiple languages.
 
 ## When to use what
 
-**Use okf-generator** when you need deterministic, offline, cross-referenced knowledge from a codebase — without burning API credits or context windows.
+**Use slim-okf-generator** when you need deterministic, offline, cross-referenced knowledge from a codebase — without burning API credits or context windows.
 
 **Use RAG / vector search** when you need semantic similarity search across unstructured documentation, not exact symbol lookup.
 
@@ -69,4 +69,4 @@ These tools focus narrowly on dependency graphs from package managers. They prod
 
 ## Why not both?
 
-okf-generator bundles are plain markdown — they can be indexed by any vector store alongside your existing docs. The bundle serves as the **deterministic symbol layer** while RAG handles the **fuzzy semantic layer**. They complement each other.
+slim-okf-generator bundles are plain markdown — they can be indexed by any vector store alongside your existing docs. The bundle serves as the **deterministic symbol layer** while RAG handles the **fuzzy semantic layer**. They complement each other.

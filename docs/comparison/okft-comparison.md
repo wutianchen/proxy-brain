@@ -1,4 +1,4 @@
-# Comparison: okf-generator vs okft
+# Comparison: slim-okf-generator vs okft
 
 Both tools operate on the Open Knowledge Format (OKF), but they serve fundamentally different roles
 in the OKF ecosystem. This report covers what each does, where they overlap, and whether
@@ -8,14 +8,14 @@ they compete or complement.
 
 ## At a glance
 
-| Dimension | okf-generator | okft |
+| Dimension | slim-okf-generator | okft |
 |-----------|--------------|------|
 | **What it is** | Bundle generator + enricher + server | Bundle linter + MCP server |
 | **Version** | v0.1.53 | v0.1.0 |
 | **OKF spec** | v0.2 (extended dialect of Google's v0.1) | v0.1 |
 | **License** | MIT | Apache-2.0 |
 | **Author** | Umair Baig | Poorva |
-| **PyPI** | `okf-generator` | `okft` |
+| **PyPI** | `slim-okf-generator` | `okft` |
 | **Stars** | ~40 | 0 |
 | **Release date** | Jul 2026 | Jul 2026 |
 
@@ -23,7 +23,7 @@ they compete or complement.
 
 ## Core purpose
 
-### okf-generator — Producer
+### slim-okf-generator — Producer
 
 Scans source code (18 languages via tree-sitter AST parsers) and generates OKF bundles from scratch.
 Also enriches bundles with LSP call graph resolution and optional LLM summaries.
@@ -48,7 +48,7 @@ OKF Bundle → [Linter] → [Validated Bundle]
 
 ## Feature comparison
 
-| Feature | okf-generator | okft |
+| Feature | slim-okf-generator | okft |
 |---------|:------------:|:----:|
 | **Bundle generation from source** | ✅ 18 languages | ❌ |
 | **Manifest dependency scanning** | ✅ 20 ecosystems | ❌ |
@@ -71,7 +71,7 @@ OKF Bundle → [Linter] → [Validated Bundle]
 
 Both expose an MCP server, but with different scope:
 
-### okf-generator MCP tools (11)
+### slim-okf-generator MCP tools (11)
 
 | Tool | Description |
 |------|-------------|
@@ -104,12 +104,12 @@ The two tools solve different problems in the same ecosystem:
 
 | Stage | Tool |
 |-------|------|
-| **Create** bundle from source code | `okf-generator` |
-| **Enrich** bundle (LSP/LLM) | `okf-generator` |
+| **Create** bundle from source code | `slim-okf-generator` |
+| **Enrich** bundle (LSP/LLM) | `slim-okf-generator` |
 | **Validate** bundle spec conformance | `okft` |
 | **Serve** bundle to AI agents | Both (different tooling depth) |
-| **Visualize** bundle | `okf-generator` |
-| **Diff** bundle versions | `okf-generator` |
+| **Visualize** bundle | `slim-okf-generator` |
+| **Diff** bundle versions | `slim-okf-generator` |
 
 A natural workflow:
 
@@ -126,18 +126,18 @@ okf mcp ./okf_bundle
 okft serve ./okf_bundle
 ```
 
-okft fills a gap okf-generator doesn't cover: spec validation. okf-generator focuses on
+okft fills a gap slim-okf-generator doesn't cover: spec validation. slim-okf-generator focuses on
 extraction, enrichment, and serving. Neither replaces the other.
 
 ---
 
-## Areas where okf-generator could learn from okft
+## Areas where slim-okf-generator could learn from okft
 
 1. **Bundle linting** — okft's 11 validation rules (orphaned concepts, broken links, malformed
-   timestamps, missing frontmatter fields) are not currently implemented in okf-generator.
+   timestamps, missing frontmatter fields) are not currently implemented in slim-okf-generator.
    Adding an `okf validate` command would improve bundle quality assurance.
 
-2. **Spec compliance** — okft tracks Google's OKF v0.1 spec. okf-generator uses an extended
+2. **Spec compliance** — okft tracks Google's OKF v0.1 spec. slim-okf-generator uses an extended
    v0.2 dialect. Documenting where the dialect diverges and providing a validation mode
    would help interoperability with okft and other OKF tools.
 
@@ -145,7 +145,7 @@ extraction, enrichment, and serving. Neither replaces the other.
 
 ## Summary
 
-| | okf-generator | okft |
+| | slim-okf-generator | okft |
 |---|---|---|
 | Best at | **Generating** OKF bundles from code | **Validating** existing OKF bundles |
 | Should you install both? | Yes, if you generate bundles and want spec validation | Yes, if you need CI linting for hand-maintained bundles |

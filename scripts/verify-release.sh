@@ -27,7 +27,7 @@ echo "=== Release $VER Verification Report ==="
 echo ""
 
 # 1. PyPI
-PYPI_VER=$(curl -s --max-time 10 https://pypi.org/pypi/okf-generator/json 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['info']['version'])" 2>/dev/null || echo "")
+PYPI_VER=$(curl -s --max-time 10 https://pypi.org/pypi/slim-okf-generator/json 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['info']['version'])" 2>/dev/null || echo "")
 if [ "$PYPI_VER" = "$VER_NUM" ]; then
     pass "PyPI"
 else
@@ -42,15 +42,15 @@ else
 fi
 
 # 3-6. Web endpoints
-check_url "Landing page"  "https://umairbaig8.github.io/okf-generator/"
-check_url "Viz demo"      "https://umairbaig8.github.io/okf-generator/viz.html"
-check_url "Docs-site"     "https://umairbaig8.github.io/okf-generator/getting-started/"
+check_url "Landing page"  "https://wutianchen.github.io/slim-okf-generator/"
+check_url "Viz demo"      "https://wutianchen.github.io/slim-okf-generator/viz.html"
+check_url "Docs-site"     "https://wutianchen.github.io/slim-okf-generator/getting-started/"
 check_url "Render app"    "https://okf-generator.onrender.com"
 
 # 7. Local CLI (install into a scratch venv so `okf` is guaranteed on PATH)
 CLI_VENV=$(mktemp -d)
 python3 -m venv "$CLI_VENV" 2>/dev/null
-CLI_VER=$("$CLI_VENV/bin/pip" install "okf-generator==$VER_NUM" -q 2>/dev/null && "$CLI_VENV/bin/okf" --version 2>&1 || echo "")
+CLI_VER=$("$CLI_VENV/bin/pip" install "slim-okf-generator==$VER_NUM" -q 2>/dev/null && "$CLI_VENV/bin/okf" --version 2>&1 || echo "")
 rm -rf "$CLI_VENV"
 if echo "$CLI_VER" | grep -q "$VER_NUM"; then
     pass "Local CLI"
@@ -60,8 +60,8 @@ fi
 
 # 8. Docker image (optional)
 if command -v docker &>/dev/null; then
-    if docker pull "ghcr.io/umairbaig8/okf-generator/okf-generator:latest" 2>/dev/null && \
-       docker run "ghcr.io/umairbaig8/okf-generator/okf-generator:latest" --version 2>/dev/null | grep -q "$VER_NUM"; then
+    if docker pull "ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator:latest" 2>/dev/null && \
+       docker run "ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator:latest" --version 2>/dev/null | grep -q "$VER_NUM"; then
         pass "Docker image"
     else
         fail "Docker image" "pull or version mismatch"

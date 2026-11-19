@@ -27,7 +27,7 @@ jobs:
       - name: Install Rust
         run: rustup show || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-      - name: Install proxy-brain
+      - name: Install slim-okf-generator
         run: pip install -e ".[dev]" -q
 
       - name: Restore previous bundle
