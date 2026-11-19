@@ -27,4 +27,4 @@ The entry point in `pyproject.toml` registers ``ManifestHandler`` under the
 ``okf.manifests`` group. OKF discovers it at startup via
 ``importlib.metadata.entry_points()`` — no manual registration needed.
 
-See [Plugin Development Guide](https://umairbaig8.github.io/okf-generator/docs-site/user-guide/plugins/) for full docs.
+See [Plugin Development Guide](https://wutianchen.github.io/slim-okf-generator/docs-site/user-guide/plugins/) for full docs.

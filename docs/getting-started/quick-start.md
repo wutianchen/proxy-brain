@@ -89,7 +89,7 @@ okf visualize ./okf_bundle
 ### Live dashboard (FastAPI)
 ```bash
 # Install the dashboard extra first:
-pip install "okf-generator[dashboard]"
+pip install "slim-okf-generator[dashboard]"
 
 okf dashboard ./okf_bundle --open
 # Launches at http://127.0.0.1:8700
@@ -147,7 +147,7 @@ print(results[0].signature)    # "class PaymentService"
 
 ## 6. Set up for AI agents
 
-One command installs okf-generator into your preferred agent:
+One command installs slim-okf-generator into your preferred agent:
 
 ```bash
 okf install claude        # Claude Code skill

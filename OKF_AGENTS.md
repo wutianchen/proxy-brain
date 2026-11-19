@@ -1,6 +1,6 @@
 # OKF Generator — Project Knowledge Base
 
-A comprehensive reference for AI agents working with the okf-generator codebase.
+A comprehensive reference for AI agents working with the slim-okf-generator codebase.
 Reading this file gives you full context about architecture, CLI, enrichment pipeline,
 parsers, linker, tests, and release process.
 

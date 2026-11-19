@@ -2,7 +2,7 @@
 
 > **Hardware:** Apple Silicon M-series, 8 cores, NVMe SSD  
 > **Dataset:** 23 GB workspace, 18,000 source files, 50+ projects  
-> **Codebase:** `okf-generator` v0.1.53 · Aug 2026
+> **Codebase:** `slim-okf-generator` v0.1.53 · Aug 2026
 
 **Terms used in this document:** *paths* = every filesystem entry visited (files + dirs); *files* = source files actually parsed; *concepts* = extracted functions, classes, modules, dependencies.
 
@@ -274,7 +274,7 @@ Every change was backed by verification:
 ## Running it
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 okf generate ./your-project ./okf_bundle
 # Output includes [perf] lines with stage-level timing
 ```

@@ -17,7 +17,7 @@ Add to your MCP client config (e.g. `claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
-    "okf-generator": {
+    "slim-okf-generator": {
       "command": "okf",
       "args": ["mcp", "/absolute/path/to/okf_bundle"]
     }

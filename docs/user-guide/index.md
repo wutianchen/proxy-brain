@@ -1,6 +1,6 @@
 # User Guide
 
-Deep dives into every feature of okf-generator.
+Deep dives into every feature of slim-okf-generator.
 
 | Section | Pages |
 |---------|-------|

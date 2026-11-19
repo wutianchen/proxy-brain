@@ -1,6 +1,6 @@
 # Enrichment
 
-okf-generator supports two enrichment layers that enhance an existing OKF bundle
+slim-okf-generator supports two enrichment layers that enhance an existing OKF bundle
 without re-scanning the source:
 
 1. **LSP enrichment** (`okf enrich --lsp`) — deterministic, free, uses local language servers to resolve precise caller/callee edges, interface implementations, and external dependency traces.

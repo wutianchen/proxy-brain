@@ -2,7 +2,7 @@
 title: Stop feeding your AI agent the whole codebase
 published: false
 tags: ai, opensource, python, productivity
-cover_image: https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/docs/images/banner.png
+cover_image: https://raw.githubusercontent.com/wutianchen/slim-okf-generator/main/docs/images/banner.png
 ---
 
 If you've used Claude Code, Cursor, or Copilot on anything bigger than a
@@ -13,7 +13,7 @@ just *locating* code, before any actual work happens.
 It gets worse with local models. Point Gemma or Llama at a real repo on
 a laptop and it just runs out of context before it's read half of it.
 
-So I built **okf-generator** — a CLI that turns a codebase into a
+So I built **slim-okf-generator** — a CLI that turns a codebase into a
 structured knowledge bundle your agent can query instead of grep-and-read.
 
 ## The idea
@@ -59,7 +59,7 @@ endpoint (including local llama.cpp/Ollama).
 ## Try it
 
 ```bash
-pip install okf-generator
+pip install slim-okf-generator
 okf generate ./your_project ./okf_bundle
 okf lookup <SomeFunctionOrClass>
 ```
@@ -84,7 +84,7 @@ hit a language edge case, that's exactly the kind of issue I want.
 10 languages, 17 manifest formats, MIT licensed, independent
 implementation of Google's [OKF v0.1 spec](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md).
 
-Repo: https://github.com/UmairBaig8/okf-generator
-Site: https://umairbaig8.github.io/okf-generator/
+Repo: https://github.com/wutianchen/slim-okf-generator
+Site: https://wutianchen.github.io/slim-okf-generator/
 
 Would genuinely like to hear what breaks if you point it at your own repo.

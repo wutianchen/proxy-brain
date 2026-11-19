@@ -102,7 +102,7 @@ Default is 2000. Lower values are cheaper and faster but may truncate responses.
 
 - A configured LLM provider (see [Configuration](../getting-started/configuration.md))
 - A generated bundle (`okf generate`)
-- `openai` package installed (`pip install "okf-generator[llm]"`)
+- `openai` package installed (`pip install "slim-okf-generator[llm]"`)
 
 ## How it's different from `okf lookup`
 

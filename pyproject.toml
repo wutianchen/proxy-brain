@@ -3,7 +3,7 @@ requires      = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name            = "proxy-brain"
+name            = "slim-okf-generator"
 version = "0.1.53"
 description     = "Generate OKF knowledge bundles from codebases — Claude skill + OpenCode integration"
 readme          = "README.md"
@@ -71,7 +71,7 @@ dashboard = [
     "uvicorn~=0.50.0",
 ]
 all = [
-    "proxy-brain[llm,dev]",
+    "slim-okf-generator[llm,dev]",
 ]
 
 [project.scripts]
@@ -119,12 +119,12 @@ containerfile       = "okf.manifest_scanner:parse_dockerfile"
 docker-compose-yml  = "okf.manifest_scanner:parse_docker_compose"
 
 [project.urls]
-Homepage      = "https://wutianchen.github.io/proxy-brain/"
-Documentation = "https://wutianchen.github.io/proxy-brain/getting-started/"
-Repository    = "https://github.com/wutianchen/proxy-brain"
-Issues        = "https://github.com/wutianchen/proxy-brain/issues"
-Changelog     = "https://github.com/wutianchen/proxy-brain/releases"
-Site          = "https://wutianchen.github.io/proxy-brain/"
+Homepage      = "https://wutianchen.github.io/slim-okf-generator/"
+Documentation = "https://wutianchen.github.io/slim-okf-generator/getting-started/"
+Repository    = "https://github.com/wutianchen/slim-okf-generator"
+Issues        = "https://github.com/wutianchen/slim-okf-generator/issues"
+Changelog     = "https://github.com/wutianchen/slim-okf-generator/releases"
+Site          = "https://wutianchen.github.io/slim-okf-generator/"
 
 [tool.hatch.build.targets.wheel]
 packages = ["okf"]

@@ -24,12 +24,12 @@ Integration:
 - Built-in MCP server to query the bundle directly.
 - One-command setup for agents: okf install claude / cursor / copilot / windsurf
 
-GitHub: https://github.com/UmairBaig8/okf-generator
-Docs & Live Demo: https://umairbaig8.github.io/okf-generator/
+GitHub: https://github.com/wutianchen/slim-okf-generator
+Docs & Live Demo: https://wutianchen.github.io/slim-okf-generator/
 Design notes: https://www.linkedin.com/feed/update/urn:li:activity:7481012073091645440/
 
 Quickstart:
-pip install okf-generator
+pip install slim-okf-generator
 okf generate . ./okf_bundle
 okf lookup <ConceptName>
 
@@ -43,7 +43,7 @@ Happy to dig into the tree-sitter integration, why static AST works well for thi
 
 title: Show HN: I got tired of AI agents re-reading whole files, so I built this
 
-url: https://umairbaig8.github.io/okf-generator/
+url: https://wutianchen.github.io/slim-okf-generator/
 
 text:
 
@@ -59,8 +59,8 @@ A few specifics:
 
 Honest limitations: it's early (v0.1.x), the cross-reference linker doesn't yet resolve dynamic dispatch or reflection-heavy code well, and a couple of the 17 language parsers are more battle-tested than others (Python and JS/TS the most; C#/SQL/Dart/Scala the newest). I'd rather say that upfront than have people find out the hard way.
 
-GitHub: https://github.com/UmairBaig8/okf-generator
-Site: https://umairbaig8.github.io/okf-generator/
+GitHub: https://github.com/wutianchen/slim-okf-generator
+Site: https://wutianchen.github.io/slim-okf-generator/
 
 Feedback on the linker accuracy or missing language support especially welcome — that's where I'd focus next.
 
@@ -82,7 +82,7 @@ Go with #1. Numbers in the title outperform vague claims on HN, and "45K to 1.2K
 
 Hi HN,
 
-I built okf-generator because I got tired of watching AI coding agents burn 14-45K tokens re-reading entire files just to find one function signature.
+I built slim-okf-generator because I got tired of watching AI coding agents burn 14-45K tokens re-reading entire files just to find one function signature.
 
 The idea: instead of dumping raw files into context, scan the codebase once into structured "concept cards" — one per function/class/module — with typed edges for calls, callers, and dependencies. Looking up a concept becomes a ~1,200 token lookup instead of a 45,000 token file read. About 97% smaller, and it's exact-symbol retrieval, not embedding-similarity guesswork like RAG.
 
@@ -90,11 +90,11 @@ Core extraction is 100% offline and deterministic — tree-sitter + stdlib AST a
 
 It ships an MCP server (11 tools) so Claude Code, Cursor, or any MCP client can query the bundle directly, plus one-command installs for Claude/Cursor/Copilot/Windsurf/Cline agent configs.
 
-GitHub: https://github.com/UmairBaig8/okf-generator
-Docs: https://umairbaig8.github.io/okf-generator/docs-site/
+GitHub: https://github.com/wutianchen/slim-okf-generator
+Docs: https://wutianchen.github.io/slim-okf-generator/docs-site/
 Live demo: https://okf-generator.onrender.com
 
-`pip install okf-generator` → `okf generate . ./okf_bundle` → `okf lookup <ConceptName>`
+`pip install slim-okf-generator` → `okf generate . ./okf_bundle` → `okf lookup <ConceptName>`
 
 Happy to dig into the tree-sitter integration, the cross-reference linker, or why static AST beat embeddings for this use case.
 

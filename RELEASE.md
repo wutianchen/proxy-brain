@@ -47,7 +47,7 @@ Hand this prompt to any LLM-powered coding agent before cutting a release:
 >     - **Containerfile**: `Containerfile` is detected (`is_manifest_file` returns True).
 >     - **LLM enrich**: `okf generate --enrich` logs no-crash warning when no API key.
 >     - **Pre-commit**: `.pre-commit-config.yaml` contains `okf-generate` hook with `files:` filter matching all 12 languages.
->     - **Docker build**: `docker build -t okf-generator .` exits 0 (CI only — skip if no Docker).
+>     - **Docker build**: `docker build -t slim-okf-generator .` exits 0 (CI only — skip if no Docker).
 >     - **Config**: `okf config` shows sectioned output. `okf config serve.port=9090` writes `.okfconfig`. Re-reading with `okf config` shows updated value.
 >     - **Init wizard**: `okf init --quick` generates bundle + `.okfconfig` without prompting.
 >     - **Live demo viz**: `okf visualize /tmp/okf_bundle /tmp/viz.html` succeeds and HTML contains `View Source` button and `"code"` fields.
@@ -69,8 +69,8 @@ vim okf/__init__.py         # __version__ = "x.y.z"
 - Review for accuracy: every commit should have a line
 - Update comparison URL at the bottom:
   ```
-  [Unreleased]: https://github.com/UmairBaig8/okf-generator/compare/vx.y.z...HEAD
-  [x.y.z]: https://github.com/UmairBaig8/okf-generator/releases/tag/vx.y.z
+  [Unreleased]: https://github.com/wutianchen/slim-okf-generator/compare/vx.y.z...HEAD
+  [x.y.z]: https://github.com/wutianchen/slim-okf-generator/releases/tag/vx.y.z
   ```
 
 ### 3. Update documentation
@@ -83,7 +83,7 @@ vim okf/__init__.py         # __version__ = "x.y.z"
   ```bash
   mkdocs build && open build/docs-site/index.html
   ```
-  The docs are served at `https://umairbaig8.github.io/okf-generator/getting-started/`.
+  The docs are served at `https://wutianchen.github.io/slim-okf-generator/getting-started/`.
   `docs/changelog.md` and `docs/development/contributing.md` are **symlinks** to the root files — no manual sync needed.
 
 ### 4. Update fixtures (if new languages/features)
@@ -140,7 +140,7 @@ The `publish.yml` workflow automatically:
 | Publish to PyPI | `pypa/gh-action-pypi-publish` |
 | Smoke test | Installs published wheel, generates from realworld fixtures, runs lookup + pairs + summarize |
 | Full test report | Runs `tests/test.sh`, attaches `TEST_REPORT.html` + `TEST_REPORT.md` to release |
-| Docker image | `docker-publish.yml` builds and pushes `ghcr.io/umairbaig8/okf-generator/okf-generator` tagged with semver + `latest` |
+| Docker image | `docker-publish.yml` builds and pushes `ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator` tagged with semver + `latest` |
 | GitHub Release | Creates release from CHANGELOG section, includes test report artifacts |
 | Docs deploy | `deploy-docs.yml` builds MkDocs + bundle + viz, deploys to `gh-pages` branch; tag pushes also run `mike deploy` for versioned docs |
 
@@ -157,14 +157,14 @@ The script checks:
 
 | Check | What it tests |
 |-------|--------------|
-| **PyPI** | `pypi.org/pypi/okf-generator` returns version `x.y.z` |
+| **PyPI** | `pypi.org/pypi/slim-okf-generator` returns version `x.y.z` |
 | **GitHub Release** | Release exists with matching tag |
-| **Landing page** | `github.io/okf-generator/` returns 200 |
+| **Landing page** | `github.io/slim-okf-generator/` returns 200 |
 | **Viz demo** | `viz.html` returns 200 |
 | **Docs-site** | `getting-started/` returns 200 (or any docs page) |
 | **Render app** | `okf-generator.onrender.com` returns 200 |
-| **Local CLI** | `pip install okf-generator==x.y.z && okf --version` matches |
-| **Docker image** | `docker pull ghcr.io/umairbaig8/okf-generator/okf-generator:latest` (if Docker available) |
+| **Local CLI** | `pip install slim-okf-generator==x.y.z && okf --version` matches |
+| **Docker image** | `docker pull ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator:latest` (if Docker available) |
 | **TEST_REPORT.html** | Downloaded from release, 0 failures |
 
 **Expected output:**
@@ -177,7 +177,7 @@ Viz demo       ✅ 200
 Docs-site      ✅ 200 (getting-started)
 Render app     ✅ 200
 Local CLI      ✅ 0.1.42
-Docker image   ✅ okf-generator:latest
+Docker image   ✅ slim-okf-generator:latest
 Test report    ✅ 0 failures
 ========================================
 ```
@@ -187,6 +187,6 @@ If any check fails, investigate before marking the release as healthy.
 ## Rollback
 
 If a release is broken:
-- **PyPI**: `pip install okf-generator==<previous-version>` (no yank unless security)
+- **PyPI**: `pip install slim-okf-generator==<previous-version>` (no yank unless security)
 - **Git tag**: Delete remote tag: `git push --delete origin vx.y.z`
 - **GitHub Release**: Delete via `gh release delete vx.y.z`

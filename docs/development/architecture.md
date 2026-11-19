@@ -1,6 +1,6 @@
 # Architecture Overview
 
-okf-generator converts source code into a structured knowledge bundle through a pipeline of discrete phases. This page documents how the pieces fit together.
+slim-okf-generator converts source code into a structured knowledge bundle through a pipeline of discrete phases. This page documents how the pieces fit together.
 
 ## Pipeline
 

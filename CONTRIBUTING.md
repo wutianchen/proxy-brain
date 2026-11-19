@@ -1,4 +1,4 @@
-# Contributing to okf-generator
+# Contributing to slim-okf-generator
 
 Thank you for taking the time to contribute! This document covers how to get set up,
 what kinds of contributions are most useful, and how to submit them.
@@ -24,8 +24,8 @@ what kinds of contributions are most useful, and how to submit them.
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/okf-generator
-   cd okf-generator
+   git clone https://github.com/<your-username>/slim-okf-generator
+   cd slim-okf-generator
    ```
 3. Create a feature branch:
    ```bash

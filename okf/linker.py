@@ -1,5 +1,5 @@
 """
-okf/linker.py  — cross-reference pass for the okf-generator pipeline.
+okf/linker.py  — cross-reference pass for the slim-okf-generator pipeline.
 
 Adds two edge types on top of the flat concept list produced by
 scan_codebase(), before write_bundle() serialises anything:

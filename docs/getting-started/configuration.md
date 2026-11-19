@@ -1,12 +1,12 @@
 # Configuration
 
-okf-generator runs out of the box with zero config. This page covers everything you can tune.
+slim-okf-generator runs out of the box with zero config. This page covers everything you can tune.
 
 Precedence (highest to lowest): **CLI flags > `.okfconfig` > built-in defaults**.
 
 ## `.okfconfig` file
 
-Place a `.okfconfig` file (JSON) at your project root. okf-generator auto-detects it from the current directory, walking up to parent directories.
+Place a `.okfconfig` file (JSON) at your project root. slim-okf-generator auto-detects it from the current directory, walking up to parent directories.
 
 ```json
 {
@@ -146,7 +146,7 @@ Route cheap description work to a local model and security audits to a cloud mod
 
 ## Config file locations
 
-okf-generator checks these paths in order (later files override earlier ones):
+slim-okf-generator checks these paths in order (later files override earlier ones):
 
 1. Built-in defaults
 2. `.okfconfig` in current directory (walks up to parent dirs)

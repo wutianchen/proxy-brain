@@ -6,5 +6,5 @@
 <text x="80" y="180" fill="#cbd5e1" font-size="30" font-family="Arial">The Knowledge Layer for AI Coding Agents</text>
 <text x="80" y="250" fill="#a5b4fc" font-size="24" font-family="Arial">✓ Zero LLM   ✓ 7 Languages   ✓ AI Agent Ready</text>
 <text x="80" y="300" fill="#a5b4fc" font-size="24" font-family="Arial">✓ Training Data   ✓ Cross References</text>
-<text x="80" y="390" fill="#ffffff" font-size="32" font-family="Courier New">pip install okf-generator</text>
+<text x="80" y="390" fill="#ffffff" font-size="32" font-family="Courier New">pip install slim-okf-generator</text>
 </svg>

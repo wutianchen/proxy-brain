@@ -1,6 +1,6 @@
 # Visualization
 
-okf-generator provides two ways to browse your knowledge bundle visually.
+slim-okf-generator provides two ways to browse your knowledge bundle visually.
 
 ## Static HTML (no server required)
 
@@ -22,7 +22,7 @@ Output: `viz.html` in the bundle directory (or specify a path).
 
 ```bash
 # Install the dashboard extra
-pip install "okf-generator[dashboard]"
+pip install "slim-okf-generator[dashboard]"
 
 # Launch
 okf dashboard ./okf_bundle --open

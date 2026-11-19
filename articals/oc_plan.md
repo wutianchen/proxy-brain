@@ -1,4 +1,4 @@
-# okf-generator — Distribution Plan
+# slim-okf-generator — Distribution Plan
 
 ## STATUS
 

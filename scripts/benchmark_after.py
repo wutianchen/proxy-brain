@@ -47,7 +47,7 @@ def run_all(label: str) -> dict:
 
     # ---- 4. POINT LOOKUP ----
     t0 = time.time()
-    _ = store2.get("okf-generator/okf/generator")
+    _ = store2.get("slim-okf-generator/okf/generator")
     t1 = time.time()
     r["point_lookup_ms"] = round((t1 - t0) * 1000, 2)
 
@@ -65,14 +65,14 @@ def run_all(label: str) -> dict:
     r["graph_200_edges"] = len(g["edges"])
 
     t0 = time.time()
-    g2 = store2.get_graph(max_nodes=50, center="okf-generator/okf/generator")
+    g2 = store2.get_graph(max_nodes=50, center="slim-okf-generator/okf/generator")
     t1 = time.time()
     r["graph_50_center_s"] = round(t1 - t0, 4)
     r["graph_50_center_nodes"] = g2["shown"]
 
     # ---- 6. NEIGHBORS ----
     t0 = time.time()
-    n = store2.get_neighbors("okf-generator/okf/generator")
+    n = store2.get_neighbors("slim-okf-generator/okf/generator")
     t1 = time.time()
     r["neighbors_ms"] = round((t1 - t0) * 1000, 1)
     r["neighbors_count"] = len(n)

@@ -903,7 +903,7 @@ def _install_mcp_config(bundle_dir: Path):
                 data = json.loads(cfg_path.read_text(encoding="utf-8"))
             except Exception:
                 data = {}
-            data.setdefault("mcp", {})["okf-generator"] = {
+            data.setdefault("mcp", {})["slim-okf-generator"] = {
                 "type": "local",
                 "command": [okf_path, "mcp", abs_bundle],
                 "enabled": True,
@@ -917,7 +917,7 @@ def _install_mcp_config(bundle_dir: Path):
         data = {
             "$schema": "https://opencode.ai/config.json",
             "mcp": {
-                "okf-generator": {
+                "slim-okf-generator": {
                     "type": "local",
                     "command": [okf_path, "mcp", abs_bundle],
                     "enabled": True,
@@ -943,7 +943,7 @@ def _install_mcp_config(bundle_dir: Path):
             data = json.loads(claude_path.read_text(encoding="utf-8"))
         except Exception:
             data = {}
-        data.setdefault("mcpServers", {})["okf-generator"] = mcp_entry
+        data.setdefault("mcpServers", {})["slim-okf-generator"] = mcp_entry
         claude_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
         written.append(f"Claude Desktop ({claude_path})")
 
@@ -952,7 +952,7 @@ def _install_mcp_config(bundle_dir: Path):
         print("Restart your MCP client to pick up the changes.")
     else:
         print("No MCP clients detected. Created opencode.json for OpenCode.")
-        print("For other clients, see: https://umairbaig8.github.io/okf-generator/docs-site/user-guide/mcp-server/")
+        print("For other clients, see: https://wutianchen.github.io/slim-okf-generator/docs-site/user-guide/mcp-server/")
 
 
 def main():

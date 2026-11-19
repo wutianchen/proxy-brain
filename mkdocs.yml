@@ -1,8 +1,8 @@
-site_name: proxy-brain
+site_name: slim-okf-generator
 site_description: High-velocity codebase parser — structured, agent-ready knowledge across 18 languages
-site_url: https://wutianchen.github.io/proxy-brain/
+site_url: https://wutianchen.github.io/slim-okf-generator/
 site_dir: build/docs-site
-repo_url: https://github.com/wutianchen/proxy-brain
+repo_url: https://github.com/wutianchen/slim-okf-generator
 
 theme:
   name: material
@@ -50,10 +50,10 @@ extra:
   announce: 🚀 v0.1.51 — Incremental updates, git-URL serve, .okfignore, filtered walker
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/wutianchen/proxy-brain
+      link: https://github.com/wutianchen/slim-okf-generator
       name: GitHub
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/proxy-brain/
+      link: https://pypi.org/project/slim-okf-generator/
       name: PyPI
   generator: false
 

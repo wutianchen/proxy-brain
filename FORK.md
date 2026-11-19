@@ -1,4 +1,4 @@
-# proxy-brain — a fork of okf-generator
+# slim-okf-generator — a fork of okf-generator
 
 This repository is a **hard fork** of
 [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator), taken at:
@@ -11,7 +11,7 @@ This repository is a **hard fork** of
 
 The full upstream history is preserved — 606 commits by Umair Baig (604),
 Yiannis Gkoufas and apikodes — so `git log` and `git blame` continue to credit
-the people who wrote each line. Only the repository's name differs.
+the people who wrote each line. Only the repository and distribution names differ.
 
 ## Licence
 
@@ -33,11 +33,13 @@ existing bundles and their readers depend on.
 
 ## What has changed
 
-**Nothing but the repository name.** The Python package is still `okf/`, the
-console script is still `okf`, and the distribution is still `okf-generator`.
-Renaming those is a separate decision: it would touch roughly 3,500 occurrences
-across 211 files, would need a new PyPI name, and would break the `okf mcp`
-invocations in any existing MCP client configuration.
+**The repository and distribution names.** The repository is
+`slim-okf-generator`, and so is the PyPI distribution
+(`pip install slim-okf-generator`), which keeps it from colliding with
+upstream's `okf-generator`. The Python package is still `okf/` and the console
+script is still `okf`: renaming those would touch roughly 3,500 occurrences
+across 211 files and would break the `okf mcp` invocations in any existing MCP
+client configuration.
 
 ## Why this fork exists
 

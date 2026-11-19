@@ -1,5 +1,5 @@
 {
-  "name": "okf-generator",
+  "name": "slim-okf-generator",
   "image": "mcr.microsoft.com/devcontainers/python:3.13",
   "postCreateCommand": "pip install -e \".[dev]\" && okf generate tests/fixtures/realworld okf_bundle",
   "forwardPorts": [8700],

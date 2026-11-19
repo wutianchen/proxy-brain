@@ -1,18 +1,18 @@
-> **This is a fork.** `proxy-brain` is a hard fork of [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator) at `5fb73be` (v0.1.53), MIT, with upstream history and attribution intact. See [FORK.md](FORK.md). Internals are still named `okf`.
+> **This is a fork.** `slim-okf-generator` is a hard fork of [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator) at `5fb73be` (v0.1.53), MIT, with upstream history and attribution intact. See [FORK.md](FORK.md). Internals are still named `okf`.
 
 <p align="center">
-  <img src="docs/images/okf_banner.jpg" alt="okf-generator" width="700">
+  <img src="docs/images/okf_banner.jpg" alt="slim-okf-generator" width="700">
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/proxy-brain/"><img src="https://img.shields.io/pypi/v/proxy-brain?style=flat-square&label=PyPI" alt="PyPI"></a>
-  <a href="https://pypi.org/project/proxy-brain/"><img src="https://img.shields.io/pypi/pyversions/proxy-brain?style=flat-square" alt="Python"></a>
-  <a href="https://github.com/wutianchen/proxy-brain/stargazers"><img src="https://img.shields.io/github/stars/wutianchen/proxy-brain?style=flat-square" alt="GitHub Stars"></a>
-  <a href="https://github.com/wutianchen/proxy-brain/actions"><img src="https://img.shields.io/github/actions/workflow/status/wutianchen/proxy-brain/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
-  <a href="https://github.com/wutianchen/proxy-brain/commits/main"><img src="https://img.shields.io/github/last-commit/wutianchen/proxy-brain?style=flat-square" alt="Last commit"></a>
-  <a href="https://github.com/wutianchen/proxy-brain/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
-  <a href="https://github.com/wutianchen/proxy-brain/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
-  <a href="https://wutianchen.github.io/proxy-brain/getting-started/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
+  <a href="https://pypi.org/project/slim-okf-generator/"><img src="https://img.shields.io/pypi/v/slim-okf-generator?style=flat-square&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/slim-okf-generator/"><img src="https://img.shields.io/pypi/pyversions/slim-okf-generator?style=flat-square" alt="Python"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/stargazers"><img src="https://img.shields.io/github/stars/wutianchen/slim-okf-generator?style=flat-square" alt="GitHub Stars"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/actions"><img src="https://img.shields.io/github/actions/workflow/status/wutianchen/slim-okf-generator/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/commits/main"><img src="https://img.shields.io/github/last-commit/wutianchen/slim-okf-generator?style=flat-square" alt="Last commit"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
+  <a href="https://github.com/wutianchen/slim-okf-generator/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://wutianchen.github.io/slim-okf-generator/getting-started/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Server-5b21b6?style=flat-square" alt="MCP"></a>
   <a href="https://www.cursor.com"><img src="https://img.shields.io/badge/Cursor-Ready-7c3aed?style=flat-square" alt="Cursor"></a>
   <a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/Claude-Ready-7c3aed?style=flat-square&logo=anthropic" alt="Claude"></a>
@@ -39,15 +39,15 @@
 ## Visual Hook & Demos
 
 <p align="center">
-  <img src="docs/demo.gif" alt="okf-generator demo" width="540">
+  <img src="docs/demo.gif" alt="slim-okf-generator demo" width="540">
   <br>
   <em><code>okf generate</code> → <code>okf lookup</code> → <code>okf diff</code> → <code>okf visualize</code> → <code>okf mcp</code> → <code>okf pairs</code></em>
 </p>
 
 <p align="center">
-  <a href="https://wutianchen.github.io/proxy-brain/viz.html"><b>Live Viz Graph</b></a>
+  <a href="https://wutianchen.github.io/slim-okf-generator/viz.html"><b>Live Viz Graph</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
-  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/proxy-brain"><b>Interactive Dev Container</b></a>
+  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/slim-okf-generator"><b>Interactive Dev Container</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
 </p>
 
@@ -63,7 +63,7 @@ Vector databases (RAG) don't solve this — they shred code into arbitrary chunk
 
 ### The OKF Edge: deterministic AST extraction
 
-Instead of chunking text, `okf-generator` uses **tree-sitter AST parsers** to create a mathematical map of your codebase. Every function, class, module, and dependency becomes a structured node with typed edges (calls, called-by, imports, depends-on).
+Instead of chunking text, `slim-okf-generator` uses **tree-sitter AST parsers** to create a mathematical map of your codebase. Every function, class, module, and dependency becomes a structured node with typed edges (calls, called-by, imports, depends-on).
 
 **The result:** an average lookup drops from **45,000 tokens → 1,200 tokens** — a **~97.3% reduction**.
 
@@ -105,7 +105,7 @@ No re-reading the file. No guessing. No LLM call required.
 
 ### How it works
 
-![okf-generator pipeline](docs/images/workflow.png)
+![slim-okf-generator pipeline](docs/images/workflow.png)
 
 ```
 1. Scan  → tree-sitter AST parsers extract functions, classes, modules (17 langs)
@@ -163,10 +163,10 @@ Each file follows the OKF v0.2 dialect (extended from Google's OKF v0.1) with st
 
 ```bash
 # Via pip
-pip install proxy-brain
+pip install slim-okf-generator
 
 # Or one-liner (macOS / Linux)
-curl -fsSL https://raw.githubusercontent.com/wutianchen/proxy-brain/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wutianchen/slim-okf-generator/main/scripts/install.sh | bash
 ```
 
 ### Generate your first bundle
@@ -270,9 +270,9 @@ This project has an OKF knowledge bundle at ./okf_bundle/.
 
 ## Comparison
 
-### okf-generator vs RAG / vector search
+### slim-okf-generator vs RAG / vector search
 
-| Capability | **okf-generator** | RAG / Vector Search |
+| Capability | **slim-okf-generator** | RAG / Vector Search |
 |---|---|---|
 | Retrieval | ✓ Precise AST lookup (exact symbols) | ~ Approximate (chunk similarity) |
 | Token cost per lookup | ✓ **~140 tokens** | ~ Varies by chunk strategy |
@@ -306,7 +306,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install proxy-brain
+      - run: pip install slim-okf-generator
       - run: okf generate . okf_bundle
       - run: okf diff .okf_bundle_prev okf_bundle --impact
       - uses: actions/github-script@v7  # post/update PR comment
@@ -324,8 +324,8 @@ okf pairs ./okf_bundle ./train.jsonl
 ### Docker image
 
 ```bash
-docker pull ghcr.io/wutianchen/proxy-brain/proxy-brain:latest
-docker run ghcr.io/wutianchen/proxy-brain/proxy-brain --help
+docker pull ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator:latest
+docker run ghcr.io/wutianchen/slim-okf-generator/slim-okf-generator --help
 ```
 
 ### Pre-commit hook
@@ -408,8 +408,8 @@ Yes — that's the intended workflow. Bundles are plain Markdown with YAML front
 ## Contributing
 
 ```bash
-git clone https://github.com/wutianchen/proxy-brain
-cd proxy-brain
+git clone https://github.com/wutianchen/slim-okf-generator
+cd slim-okf-generator
 pip install -e ".[dev]"
 pytest tests/ -q
 ```
@@ -422,4 +422,4 @@ pytest tests/ -q
 
 [MIT](LICENSE) — Copyright © 2026 Umair Baig
 
-`okf-generator` produces OKF v0.2 bundles — an extended dialect of the [Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) by Google. Our v0.2 adds schema version, concept identity, language, status, and typed relationships to every concept file. Not affiliated with Google.
+`slim-okf-generator` produces OKF v0.2 bundles — an extended dialect of the [Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) by Google. Our v0.2 adds schema version, concept identity, language, status, and typed relationships to every concept file. Not affiliated with Google.

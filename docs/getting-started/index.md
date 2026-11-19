@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to okf-generator. These pages will get you from zero to your first knowledge bundle.
+Welcome to slim-okf-generator. These pages will get you from zero to your first knowledge bundle.
 
 | Page | What it covers |
 |------|----------------|

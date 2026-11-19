@@ -12,7 +12,7 @@
 # Customize:
 #   - Change `okf generate ./src ./okf_bundle` to point at your source directory
 #   - Add `--enrich deep` if you configure an LLM provider in .okfconfig
-#   - See https://umairbaig8.github.io/okf-generator/user-guide/ci-cd/ for details
+#   - See https://wutianchen.github.io/slim-okf-generator/user-guide/ci-cd/ for details
 
 name: OKF Auto-Bundle
 
@@ -38,8 +38,8 @@ jobs:
       - name: Install Rust (for tree-sitter parsers with native deps)
         run: rustup show || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-      - name: Install okf-generator
-        run: pip install okf-generator
+      - name: Install slim-okf-generator
+        run: pip install slim-okf-generator
 
       - name: Generate OKF bundle
         run: |

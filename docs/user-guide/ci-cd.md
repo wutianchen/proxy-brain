@@ -30,8 +30,8 @@ jobs:
           cache: pip
       - name: Install Rust
         run: rustup show || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-      - name: Install okf-generator
-        run: pip install okf-generator
+      - name: Install slim-okf-generator
+        run: pip install slim-okf-generator
       - name: Generate OKF bundle
         run: |
           okf generate ./src ./okf_bundle
@@ -47,7 +47,7 @@ jobs:
 
 Customize `okf generate ./src ./okf_bundle` to match your source directory. Add `--enrich deep` if you have an LLM configured.
 
-> 📄 **Ready-to-copy template:** [`docs/examples/okf-auto-bundle.yml`](https://github.com/UmairBaig8/okf-generator/blob/main/docs/examples/okf-auto-bundle.yml)
+> 📄 **Ready-to-copy template:** [`docs/examples/okf-auto-bundle.yml`](https://github.com/wutianchen/slim-okf-generator/blob/main/docs/examples/okf-auto-bundle.yml)
 
 ### How it works
 
@@ -112,7 +112,7 @@ aws s3 sync ./okf_bundles s3://my-org-okf-bundles/
 okf-bundle:
   image: python:3.11-slim
   script:
-    - pip install okf-generator
+    - pip install slim-okf-generator
     - okf generate ./src ./okf_bundle
   artifacts:
     paths:

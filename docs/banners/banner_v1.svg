@@ -96,7 +96,7 @@
     letter-spacing="-1"
     fill="url(#text-grad)"
     filter="url(#glow)"
-  >okf-generator</text>
+  >slim-okf-generator</text>
 
   <!-- Tagline -->
   <text
