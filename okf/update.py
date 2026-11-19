@@ -47,7 +47,10 @@ def _concept_output_path(concept_id: str, bundle_dir: Path) -> Path:
     for seg in segments:
         if seg in ("", ".", "..") or "/" in seg or seg.startswith("~"):
             raise ValueError(f"unsafe concept_id segment {seg!r} in {concept_id!r}")
-    return bundle_dir.joinpath(*segments).with_suffix(".md")
+    # Append rather than with_suffix(): a dotted leaf such as
+    # "org.apache.flink:flink-avro" would otherwise lose everything from its
+    # last dot and overwrite every sibling sharing that prefix.
+    return bundle_dir.joinpath(*segments[:-1], segments[-1] + ".md")
 
 
 def _load_concepts_from_bundle(bundle_dir: Path) -> dict[str, Concept]:

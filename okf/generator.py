@@ -1209,11 +1209,9 @@ def _concept_output_path(concept: Concept, output_dir: Path) -> Path:
     Rejects absolute or ``..``-containing segments so a crafted concept_id
     cannot escape the bundle directory.
     """
-    segments = concept.concept_id.split("/")
-    for seg in segments:
-        if seg in ("", ".", "..") or "/" in seg or seg.startswith("~"):
-            raise ValueError(f"unsafe concept_id segment {seg!r} in {concept.concept_id!r}")
-    return output_dir.joinpath(*segments).with_suffix(".md")
+    from .update import _concept_output_path as _path_for_id
+
+    return _path_for_id(concept.concept_id, output_dir)
 
 
 def write_bundle(
