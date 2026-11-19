@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OKF Generator — The knowledge layer for AI coding agents.</title>
+  <title>proxy-brain — The knowledge layer for AI coding agents.</title>
   <meta name="description" content="Deploy deterministic, tree-sitter AST knowledge graphs with LSP-powered call graph enrichment. Slash AI agent context costs by 80%, run fully-local SLMs, and integrate seamlessly via Model Context Protocol (MCP).">
-  <meta property="og:title" content="OKF Generator — The knowledge layer for AI coding agents.">
+  <meta property="og:title" content="proxy-brain — The knowledge layer for AI coding agents.">
   <meta property="og:description" content="Map any codebase into an interactive, structured knowledge graph. Drop context token bloat, maximize local model intelligence, and protect your privacy.">
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/banner.png">
-  <meta property="og:url" content="https://umairbaig8.github.io/okf-generator/" />
+  <meta property="og:image" content="https://wutianchen.github.io/proxy-brain/images/social_preview.jpg">
+  <meta property="og:url" content="https://wutianchen.github.io/proxy-brain/" />
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OKF Generator — The knowledge layer for AI coding agents." />
+  <meta name="twitter:title" content="proxy-brain — The knowledge layer for AI coding agents." />
   <meta name="twitter:description" content="Map any codebase into a structured knowledge graph. ~100x fewer tokens." />
-  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/banner.png" />
-  <link rel="canonical" href="https://umairbaig8.github.io/okf-generator/" />
+  <meta name="twitter:image" content="https://wutianchen.github.io/proxy-brain/images/social_preview.jpg" />
+  <link rel="canonical" href="https://wutianchen.github.io/proxy-brain/" />
   <link rel="icon" type="image/svg+xml" href="images/okf-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +83,7 @@
       </div>
       <div class="nav-actions flex items-center gap-3 flex-shrink-0">
         <button onclick="toggleTheme()" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 p-2.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition duration-200" title="Toggle theme"><i id="theme-icon" class="fa-solid fa-sun text-base dark:hidden"></i><i id="theme-icon-dark" class="fa-solid fa-moon text-base hidden dark:block"></i></button>
-        <a href="https://github.com/UmairBaig8/okf-generator" target="_blank" class="flex items-center gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900/60 transition border border-zinc-200 dark:border-zinc-800/80" aria-label="View on GitHub">
+        <a href="https://github.com/wutianchen/proxy-brain" target="_blank" class="flex items-center gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white px-3 py-1.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900/60 transition border border-zinc-200 dark:border-zinc-800/80" aria-label="View on GitHub">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           <span id="gh-stars" class="font-mono text-xs font-bold">GitHub</span>
         </a>
@@ -114,9 +114,9 @@
       <div class="flex items-center justify-center gap-4 flex-wrap mb-8">
         <a href="#install" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold text-base px-8 py-4 rounded-xl transition shadow-xl shadow-brand-600/20 transform hover:-translate-y-0.5">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2v14m0 0l-4-4m4 4l4-4M2 20h20"/></svg>
-          pip install okf-generator
+          pip install proxy-brain
         </a>
-        <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=UmairBaig8/okf-generator" target="_blank" class="inline-flex items-center gap-2 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 backdrop-blur-md hover:border-zinc-400 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 font-bold text-base px-8 py-4 rounded-xl transition transform hover:-translate-y-0.5">
+        <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/proxy-brain" target="_blank" class="inline-flex items-center gap-2 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 backdrop-blur-md hover:border-zinc-400 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 font-bold text-base px-8 py-4 rounded-xl transition transform hover:-translate-y-0.5">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           Codespaces Demo
         </a>
@@ -128,12 +128,12 @@
           Viz Graph
         </a>
         <span class="text-zinc-300 dark:text-zinc-700 text-xs">|</span>
-        <a href="https://github.com/UmairBaig8/okf-generator/tree/main/docs/okf_bundle" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-1.5 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition">
+        <a href="https://github.com/wutianchen/proxy-brain/tree/main/docs/okf_bundle" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-1.5 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Live Bundle
         </a>
         <span class="text-zinc-300 dark:text-zinc-700 text-xs">|</span>
-        <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=UmairBaig8/okf-generator" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-1.5 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition">
+        <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/proxy-brain" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-1.5 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" stroke-linecap="round"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
           Dev Container
         </a>
@@ -164,7 +164,7 @@
           <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full px-3 py-1.5"><i class="fa-solid fa-pen-fancy text-amber-500"></i> Hand-rolled YAML — 10.8× faster</span>
           <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full px-3 py-1.5"><i class="fa-solid fa-flask text-pink-500"></i> 71 round-trip frontmatter tests</span>
           <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full px-3 py-1.5"><i class="fa-solid fa-chart-simple text-indigo-500"></i> Stage-level <code class="font-mono">[perf]</code> instrumentation</span>
-          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full px-3 py-1.5"><i class="fa-solid fa-file-lines text-fuchsia-500"></i> <a href="https://umairbaig8.github.io/okf-generator/performance/" class="underline hover:text-brand-600">Full performance story</a></span>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full px-3 py-1.5"><i class="fa-solid fa-file-lines text-fuchsia-500"></i> <a href="https://wutianchen.github.io/proxy-brain/performance/" class="underline hover:text-brand-600">Full performance story</a></span>
         </div>
       </div>
 
@@ -512,7 +512,7 @@
           <div class="bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg p-2.5 font-mono text-xs text-brand-600 dark:text-brand-400 flex items-center justify-between"><span>okf install all</span><button onclick="copyText(this, 'okf install all')" class="text-zinc-400 hover:text-brand-500 transition flex-shrink-0 ml-2"><i class="fa-regular fa-copy"></i></button></div>
         </div>
       </div>
-      <p class="text-center mt-8 text-sm text-zinc-500">Register MCP server: <code class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded font-mono text-xs">okf mcp --install</code> · <a href="https://github.com/UmairBaig8/okf-generator/blob/main/docs/agent-integration.md" class="text-brand-600 dark:text-brand-400 hover:underline" target="_blank">Full integration guide →</a></p>
+      <p class="text-center mt-8 text-sm text-zinc-500">Register MCP server: <code class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded font-mono text-xs">okf mcp --install</code> · <a href="https://github.com/wutianchen/proxy-brain/blob/main/docs/agent-integration.md" class="text-brand-600 dark:text-brand-400 hover:underline" target="_blank">Full integration guide →</a></p>
     </div>
   </section>
   <section id="enrichment" class="py-24 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-900 transition duration-300">
@@ -774,7 +774,7 @@
           <span class="text-brand-400">python-version:</span> <span class="text-emerald-400">'3.11'</span>
       - <span class="text-brand-400">name:</span> Install OKF Generator
         <span class="text-brand-400">run:</span> |
-          pip install okf-generator
+          pip install proxy-brain
       - <span class="text-brand-400">name:</span> Compile AST Knowledge Bundle
         <span class="text-brand-400">run:</span> |
           okf generate ./src ./okf_bundle --enrich deep
@@ -792,7 +792,7 @@
         <p class="text-zinc-600 dark:text-zinc-400 mt-4">Install the CLI, generate your code index, and plug it directly into your local IDE.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm transition duration-300"><div class="w-8 h-8 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-mono font-bold text-sm border border-brand-200 dark:border-brand-800/30 mb-4">1</div><h4 class="text-base font-bold text-zinc-900 dark:text-white mb-2">Install Package</h4><p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">Get the core package via pip, or download the lightweight binary shell runner directly.</p><pre class="bg-white dark:bg-zinc-950 text-brand-600 dark:text-brand-400 font-mono text-xs p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto transition duration-300">pip install okf-generator</pre></div>
+        <div class="bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm transition duration-300"><div class="w-8 h-8 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-mono font-bold text-sm border border-brand-200 dark:border-brand-800/30 mb-4">1</div><h4 class="text-base font-bold text-zinc-900 dark:text-white mb-2">Install Package</h4><p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">Get the core package via pip, or download the lightweight binary shell runner directly.</p><pre class="bg-white dark:bg-zinc-950 text-brand-600 dark:text-brand-400 font-mono text-xs p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto transition duration-300">pip install proxy-brain</pre></div>
         <div class="bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm transition duration-300"><div class="w-8 h-8 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-mono font-bold text-sm border border-indigo-200 dark:border-indigo-800/30 mb-4">2</div><h4 class="text-base font-bold text-zinc-900 dark:text-white mb-2">Scan Codebase</h4><p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">Generate your structural graph from your source repository instantly. Fully offline.</p><pre class="bg-white dark:bg-zinc-950 text-indigo-600 dark:text-indigo-300 font-mono text-xs p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto transition duration-300">okf generate ./src ./bundle</pre></div>
         <div class="bg-zinc-50 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm transition duration-300"><div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-mono font-bold text-sm border border-emerald-200 dark:border-emerald-800/30 mb-4">3</div><h4 class="text-base font-bold text-zinc-900 dark:text-white mb-2">Start MCP Server</h4><p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">Expose your knowledge bundle to Claude Code or Cursor via the local MCP protocol.</p><pre class="bg-white dark:bg-zinc-950 text-emerald-600 dark:text-emerald-300 font-mono text-xs p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto transition duration-300">okf mcp ./bundle --port 4567</pre></div>
       </div>
@@ -842,20 +842,20 @@
         <h3 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4">Start in 30 seconds</h3>
         <p class="text-brand-200 max-w-2xl mx-auto text-lg leading-relaxed mb-10">Install, generate your bundle, and do your first lookup. No API keys, no signup, fully offline.</p>
         <div class="flex items-center justify-center gap-4 flex-wrap">
-          <div class="inline-flex items-center bg-white/10 border border-white/20 rounded-xl overflow-hidden backdrop-blur-sm shadow-xl shadow-brand-900/50"><span class="font-mono text-base font-medium text-white px-6 py-4">pip install okf-generator</span><button onclick="copyText(this, 'pip install okf-generator')" class="bg-white/15 hover:bg-white/25 text-white px-5 py-4 transition flex items-center gap-2 text-sm font-semibold border-l border-white/20"><i class="fa-regular fa-copy"></i> Copy</button></div>
-          <a href="https://umairbaig8.github.io/okf-generator/docs-site/getting-started/quick-start/" class="bg-white hover:bg-zinc-100 text-brand-900 font-bold px-8 py-4 rounded-xl transition shadow-xl transform hover:-translate-y-0.5">Get Started Free</a>
+          <div class="inline-flex items-center bg-white/10 border border-white/20 rounded-xl overflow-hidden backdrop-blur-sm shadow-xl shadow-brand-900/50"><span class="font-mono text-base font-medium text-white px-6 py-4">pip install proxy-brain</span><button onclick="copyText(this, 'pip install proxy-brain')" class="bg-white/15 hover:bg-white/25 text-white px-5 py-4 transition flex items-center gap-2 text-sm font-semibold border-l border-white/20"><i class="fa-regular fa-copy"></i> Copy</button></div>
+          <a href="https://wutianchen.github.io/proxy-brain/docs-site/getting-started/quick-start/" class="bg-white hover:bg-zinc-100 text-brand-900 font-bold px-8 py-4 rounded-xl transition shadow-xl transform hover:-translate-y-0.5">Get Started Free</a>
         </div>
         <div class="mt-6 flex items-center justify-center gap-4 text-sm text-brand-300">
-          <span>Or curl: <a href="https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/scripts/install.sh" class="text-white hover:underline font-mono" target="_blank">install.sh</a></span>
+          <span>Or curl: <a href="https://raw.githubusercontent.com/wutianchen/proxy-brain/main/scripts/install.sh" class="text-white hover:underline font-mono" target="_blank">install.sh</a></span>
           <span class="text-brand-400/50">|</span>
           <span>LLM support: <code class="bg-white/10 px-2 py-0.5 rounded font-mono text-xs text-brand-200">pip install "okf-generator[llm]"</code></span>
           <span class="text-brand-400/50">|</span>
           <span>Dashboard support: <code class="bg-white/10 px-2 py-0.5 rounded font-mono text-xs text-brand-200">pip install "okf-generator[dashboard]"</code></span>
         </div>
         <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
-          <a href="https://github.com/UmairBaig8/okf-generator" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://pypi.org/project/okf-generator/" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-solid fa-box"></i> PyPI</a>
-          <a href="https://umairbaig8.github.io/okf-generator/docs-site/getting-started/quick-start/" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-solid fa-book"></i> Documentation</a>
+          <a href="https://github.com/wutianchen/proxy-brain" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://pypi.org/project/proxy-brain/" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-solid fa-box"></i> PyPI</a>
+          <a href="https://wutianchen.github.io/proxy-brain/docs-site/getting-started/quick-start/" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-solid fa-book"></i> Documentation</a>
           <a href="https://www.linkedin.com/pulse/how-do-you-give-ai-agent-understanding-entire-codebase-umair-baig-q7ubf" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-300 hover:text-white border border-white/20 hover:border-white/40 px-5 py-2.5 rounded-lg transition backdrop-blur-sm"><i class="fa-brands fa-linkedin"></i> LinkedIn Article</a>
         </div>
       </div>
@@ -867,14 +867,14 @@
     <div class="absolute -top-12 left-1/3 w-80 h-80 bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-left">
-        <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Project</div><ul class="space-y-2 text-xs"><li><a href="https://github.com/UmairBaig8/okf-generator" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">GitHub</a></li><li><a href="https://pypi.org/project/okf-generator/" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">PyPI</a></li><li><a href="docs-site/" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">Documentation</a></li><li><a href="https://github.com/UmairBaig8/okf-generator/blob/main/LICENSE" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">MIT License</a></li></ul></div>
+        <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Project</div><ul class="space-y-2 text-xs"><li><a href="https://github.com/wutianchen/proxy-brain" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">GitHub</a></li><li><a href="https://pypi.org/project/proxy-brain/" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">PyPI</a></li><li><a href="docs-site/" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">Documentation</a></li><li><a href="https://github.com/wutianchen/proxy-brain/blob/main/LICENSE" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">MIT License</a></li></ul></div>
         <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Docs</div><ul class="space-y-2 text-xs"><li><a href="#cli" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">CLI Reference</a></li><li><a href="#comparison" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">Comparison</a></li><li><a href="#enrichment" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">Enrichment</a></li><li><a href="#faq" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition">FAQ</a></li></ul></div>
         <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Languages</div><ul class="space-y-2 text-xs"><li class="text-zinc-500 dark:text-zinc-400">Python, JS, TS, Go, Rust</li><li class="text-zinc-500 dark:text-zinc-400">Java, Kotlin, C, C++, C#</li><li class="text-zinc-500 dark:text-zinc-400">Ruby, Swift, PHP, Dart, Scala</li></ul></div>
-        <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Support</div><p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Open an issue on <a href="https://github.com/UmairBaig8/okf-generator" class="text-brand-600 dark:text-brand-400 hover:underline">GitHub</a> for help.</p></div>
+        <div class="space-y-3"><div class="text-xs font-bold text-zinc-600 dark:text-zinc-300 uppercase tracking-wider">Support</div><p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Open an issue on <a href="https://github.com/wutianchen/proxy-brain" class="text-brand-600 dark:text-brand-400 hover:underline">GitHub</a> for help.</p></div>
       </div>
       <div class="border-t border-zinc-200 dark:border-zinc-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
-        <div class="flex items-center gap-2"><div class="w-5 h-5 rounded bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-black text-[10px]">okf</div><span class="text-zinc-500 dark:text-zinc-400">&copy; 2026 Umair Baig &middot; <a href="https://github.com/UmairBaig8/okf-generator/blob/main/LICENSE" class="text-brand-600 dark:text-brand-400 hover:underline">MIT License</a></span></div>
-        <div class="flex items-center gap-4"><a href="https://github.com/UmairBaig8/okf-generator" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-brands fa-github"></i> GitHub</a><a href="https://pypi.org/project/okf-generator/" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-solid fa-box"></i> PyPI</a><a href="https://www.linkedin.com/pulse/how-do-you-give-ai-agent-understanding-entire-codebase-umair-baig-q7ubf" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></div>
+        <div class="flex items-center gap-2"><div class="w-5 h-5 rounded bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-black text-[10px]">okf</div><span class="text-zinc-500 dark:text-zinc-400">&copy; 2026 Umair Baig &middot; <a href="https://github.com/wutianchen/proxy-brain/blob/main/LICENSE" class="text-brand-600 dark:text-brand-400 hover:underline">MIT License</a></span></div>
+        <div class="flex items-center gap-4"><a href="https://github.com/wutianchen/proxy-brain" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-brands fa-github"></i> GitHub</a><a href="https://pypi.org/project/proxy-brain/" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-solid fa-box"></i> PyPI</a><a href="https://www.linkedin.com/pulse/how-do-you-give-ai-agent-understanding-entire-codebase-umair-baig-q7ubf" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></div>
       </div>
     </div>
   </footer>
@@ -894,7 +894,7 @@
     // Live GitHub stars
     async function fetchStars(){
       try{
-        const res=await fetch('https://api.github.com/repos/UmairBaig8/okf-generator',{headers:{'Accept':'application/vnd.github.v3+json'}});
+        const res=await fetch('https://api.github.com/repos/wutianchen/proxy-brain',{headers:{'Accept':'application/vnd.github.v3+json'}});
         if(!res.ok)return;
         const data=await res.json();
         const stars=data.stargazers_count;
