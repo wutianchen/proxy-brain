@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [Unreleased]
+
+### Fixed
+
+- A concept whose id ends in a dotted name (a Maven `groupId:artifactId`, a
+  `docusaurus.config`) is written to its own file. `Path.with_suffix(".md")` cut
+  the name at its last dot, so siblings sharing a prefix overwrote each other:
+  304 Maven dependencies collapsed into 35 files on DataSQRL/sqrl. Bundles
+  generated before this fix are missing those concepts; regenerate them, since
+  `okf update` does not remove the old truncated files.
+
+
 ## [0.1.53] — 2026-08-01
 
 ### Fixed

@@ -10,6 +10,8 @@ from pathlib import Path
 
 import yaml
 
+from okf.bundle_paths import concept_id_from_path
+
 
 def _migrate_v01_to_v02(bundle_dir: Path, dry_run: bool = False) -> int:
     """Convert a v0.1 bundle to v0.2 in-place. Returns count of files changed."""
@@ -55,7 +57,7 @@ def _migrate_v01_to_v02(bundle_dir: Path, dry_run: bool = False) -> int:
         # 3. Add concept_id if missing (non-Index, non-Log concepts)
         if ctype not in {"Index", "Log"}:
             rel = path.relative_to(bundle_dir)
-            cid = str(rel.with_suffix("")).replace("\\", "/").replace("/", "/")
+            cid = concept_id_from_path(rel)
             if not fm.get("concept_id"):
                 fm["concept_id"] = cid
 

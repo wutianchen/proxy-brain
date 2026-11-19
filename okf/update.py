@@ -28,6 +28,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from okf._walk import walk_dirs
+from okf.bundle_paths import concept_id_from_path, concept_path
 from okf.parsers.base import Concept
 
 log = logging.getLogger("okf_update")
@@ -38,16 +39,8 @@ log = logging.getLogger("okf_update")
 # ---------------------------------------------------------------------------
 
 def _concept_output_path(concept_id: str, bundle_dir: Path) -> Path:
-    """Map concept_id to .md path in the bundle.
-
-    Rejects absolute or ``..``-containing segments so a crafted concept_id
-    cannot escape the bundle directory.
-    """
-    segments = concept_id.split("/")
-    for seg in segments:
-        if seg in ("", ".", "..") or "/" in seg or seg.startswith("~"):
-            raise ValueError(f"unsafe concept_id segment {seg!r} in {concept_id!r}")
-    return bundle_dir.joinpath(*segments).with_suffix(".md")
+    """Map concept_id to its .md path in the bundle (see okf.bundle_paths)."""
+    return concept_path(concept_id, bundle_dir)
 
 
 def _load_concepts_from_bundle(bundle_dir: Path) -> dict[str, Concept]:
@@ -67,7 +60,7 @@ def _load_concepts_from_bundle(bundle_dir: Path) -> dict[str, Concept]:
         if raw["type"] in {"Index", "Log"}:
             continue
         rel = md_file.relative_to(bundle_dir)
-        cid = str(rel.with_suffix("")).replace(os.sep, "/")
+        cid = concept_id_from_path(rel)
         s = raw.get("sections", {})
         full_body = raw.get("body", "")
         source_lines = _parse_source_range(s.get("source", ""))
@@ -512,7 +505,7 @@ def update_bundle(
         if md_file.name in reserved_names:
             continue
         rel = md_file.relative_to(bundle_dir)
-        cid = str(rel.with_suffix("")).replace(os.sep, "/")
+        cid = concept_id_from_path(rel)
         if cid not in manifest_concept_ids:
             md_file.unlink()
             cleaned += 1
