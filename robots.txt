@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wutianchen.github.io/slim-okf-generator/sitemap.xml
