@@ -2,7 +2,7 @@
 
 ## CRITICAL RULE: Never read source files directly for context
 
-This project uses `okf-generator` to produce an OKF v0.2 knowledge bundle at `./okf_bundle/`. The bundle contains structured markdown files — one per function, class, module, and dependency.
+This project uses `proxy-brain` to produce an OKF v0.2 knowledge bundle at `./okf_bundle/`. The bundle contains structured markdown files — one per function, class, module, and dependency.
 
 **BEFORE reading or editing any source file, you MUST run:**
 
@@ -55,4 +55,4 @@ okf diff ./okf_bundle.bak ./okf_bundle --json
 
 - Default: `./okf_bundle/`
 - Also checked: `./Knowlege/okf_bundle/`, `./knowledge/okf_bundle/`
-- [okf-generator README](../README.md)
+- [proxy-brain README](../README.md)

@@ -1,18 +1,18 @@
 > **This is a fork.** `proxy-brain` is a hard fork of [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator) at `5fb73be` (v0.1.53), MIT, with upstream history and attribution intact. See [FORK.md](FORK.md). Internals are still named `okf`.
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/okf_banner.jpg" alt="okf-generator" width="700">
+  <img src="docs/images/okf_banner.jpg" alt="okf-generator" width="700">
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/okf-generator/"><img src="https://img.shields.io/pypi/v/okf-generator?style=flat-square&label=PyPI" alt="PyPI"></a>
-  <a href="https://pypi.org/project/okf-generator/"><img src="https://img.shields.io/pypi/pyversions/okf-generator?style=flat-square" alt="Python"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/stargazers"><img src="https://img.shields.io/github/stars/UmairBaig8/okf-generator?style=flat-square" alt="GitHub Stars"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/actions"><img src="https://img.shields.io/github/actions/workflow/status/UmairBaig8/okf-generator/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/commits/main"><img src="https://img.shields.io/github/last-commit/UmairBaig8/okf-generator?style=flat-square" alt="Last commit"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
-  <a href="https://github.com/UmairBaig8/okf-generator/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
-  <a href="https://umairbaig8.github.io/okf-generator/getting-started/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
+  <a href="https://pypi.org/project/proxy-brain/"><img src="https://img.shields.io/pypi/v/proxy-brain?style=flat-square&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/proxy-brain/"><img src="https://img.shields.io/pypi/pyversions/proxy-brain?style=flat-square" alt="Python"></a>
+  <a href="https://github.com/wutianchen/proxy-brain/stargazers"><img src="https://img.shields.io/github/stars/wutianchen/proxy-brain?style=flat-square" alt="GitHub Stars"></a>
+  <a href="https://github.com/wutianchen/proxy-brain/actions"><img src="https://img.shields.io/github/actions/workflow/status/wutianchen/proxy-brain/ci.yml?style=flat-square&label=tests" alt="Tests"></a>
+  <a href="https://github.com/wutianchen/proxy-brain/commits/main"><img src="https://img.shields.io/github/last-commit/wutianchen/proxy-brain?style=flat-square" alt="Last commit"></a>
+  <a href="https://github.com/wutianchen/proxy-brain/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
+  <a href="https://github.com/wutianchen/proxy-brain/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://wutianchen.github.io/proxy-brain/getting-started/"><img src="https://img.shields.io/badge/📖-Docs-7c3aed?style=flat-square" alt="Docs"></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Server-5b21b6?style=flat-square" alt="MCP"></a>
   <a href="https://www.cursor.com"><img src="https://img.shields.io/badge/Cursor-Ready-7c3aed?style=flat-square" alt="Cursor"></a>
   <a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/Claude-Ready-7c3aed?style=flat-square&logo=anthropic" alt="Claude"></a>
@@ -39,17 +39,16 @@
 ## Visual Hook & Demos
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/demo.gif" alt="okf-generator demo" width="540">
+  <img src="docs/demo.gif" alt="okf-generator demo" width="540">
   <br>
   <em><code>okf generate</code> → <code>okf lookup</code> → <code>okf diff</code> → <code>okf visualize</code> → <code>okf mcp</code> → <code>okf pairs</code></em>
 </p>
 
 <p align="center">
-  <a href="https://umairbaig8.github.io/okf-generator/viz.html"><b>Live Viz Graph</b></a>
+  <a href="https://wutianchen.github.io/proxy-brain/viz.html"><b>Live Viz Graph</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
-  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=UmairBaig8/okf-generator"><b>Interactive Dev Container</b></a>
+  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=wutianchen/proxy-brain"><b>Interactive Dev Container</b></a>
   <span>&nbsp;&middot;&nbsp;</span>
-  <a href="https://okf-generator.onrender.com"><b>Render App Demo</b></a>
 </p>
 
 ---
@@ -106,7 +105,7 @@ No re-reading the file. No guessing. No LLM call required.
 
 ### How it works
 
-![okf-generator pipeline](https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/workflow.png)
+![okf-generator pipeline](docs/images/workflow.png)
 
 ```
 1. Scan  → tree-sitter AST parsers extract functions, classes, modules (17 langs)
@@ -135,7 +134,7 @@ Use `--domains crossplane` to re-classify YAML concepts using data-driven rules.
 
 `requirements.txt` · `pyproject.toml` · `package.json` · `Cargo.toml` · `Cargo.lock` · `yarn.lock` · `pnpm-lock.yaml` · `go.mod` · `go.sum` · `poetry.lock` · `composer.json` · `pom.xml` · `Gemfile` · `build.gradle` / `.kts` · `Package.swift` · `Dockerfile` / `Containerfile` · `docker-compose.yml` · `mix.exs` · `project.clj` · `package.swift`
 
-![Before and after: 14,000 tokens vs 140 tokens](https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/before_after.svg)
+![Before and after: 14,000 tokens vs 140 tokens](docs/images/before_after.svg)
 
 ### What a bundle looks like
 
@@ -164,10 +163,10 @@ Each file follows the OKF v0.2 dialect (extended from Google's OKF v0.1) with st
 
 ```bash
 # Via pip
-pip install okf-generator
+pip install proxy-brain
 
 # Or one-liner (macOS / Linux)
-curl -fsSL https://raw.githubusercontent.com/UmairBaig8/okf-generator/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wutianchen/proxy-brain/main/scripts/install.sh | bash
 ```
 
 ### Generate your first bundle
@@ -307,7 +306,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install okf-generator
+      - run: pip install proxy-brain
       - run: okf generate . okf_bundle
       - run: okf diff .okf_bundle_prev okf_bundle --impact
       - uses: actions/github-script@v7  # post/update PR comment
@@ -325,8 +324,8 @@ okf pairs ./okf_bundle ./train.jsonl
 ### Docker image
 
 ```bash
-docker pull ghcr.io/umairbaig8/okf-generator/okf-generator:latest
-docker run ghcr.io/umairbaig8/okf-generator/okf-generator --help
+docker pull ghcr.io/wutianchen/proxy-brain/proxy-brain:latest
+docker run ghcr.io/wutianchen/proxy-brain/proxy-brain --help
 ```
 
 ### Pre-commit hook
@@ -409,8 +408,8 @@ Yes — that's the intended workflow. Bundles are plain Markdown with YAML front
 ## Contributing
 
 ```bash
-git clone https://github.com/UmairBaig8/okf-generator
-cd okf-generator
+git clone https://github.com/wutianchen/proxy-brain
+cd proxy-brain
 pip install -e ".[dev]"
 pytest tests/ -q
 ```

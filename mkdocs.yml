@@ -1,8 +1,8 @@
-site_name: OKF Generator
+site_name: proxy-brain
 site_description: High-velocity codebase parser — structured, agent-ready knowledge across 18 languages
-site_url: https://umairbaig8.github.io/okf-generator/
+site_url: https://wutianchen.github.io/proxy-brain/
 site_dir: build/docs-site
-repo_url: https://github.com/UmairBaig8/okf-generator
+repo_url: https://github.com/wutianchen/proxy-brain
 
 theme:
   name: material
@@ -50,10 +50,10 @@ extra:
   announce: 🚀 v0.1.51 — Incremental updates, git-URL serve, .okfignore, filtered walker
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/UmairBaig8/okf-generator
+      link: https://github.com/wutianchen/proxy-brain
       name: GitHub
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/okf-generator/
+      link: https://pypi.org/project/proxy-brain/
       name: PyPI
   generator: false
 

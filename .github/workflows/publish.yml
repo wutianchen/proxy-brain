@@ -53,7 +53,7 @@ jobs:
             echo "--- Smoke attempt $attempt/10 ---"
 
             # Wait for PyPI to index the new version
-            pip index versions okf-generator 2>/dev/null | grep -q "$VERSION" \
+            pip index versions proxy-brain 2>/dev/null | grep -q "$VERSION" \
               && echo "Found v$VERSION on PyPI" \
               || { echo "Version not found yet, waiting 5s..."; sleep 5; continue; }
 
@@ -65,7 +65,7 @@ jobs:
             rm -rf /tmp/smoke_venv
             python3 -m venv /tmp/smoke_venv
 
-            if /tmp/smoke_venv/bin/pip install --quiet "okf-generator==$VERSION"; then
+            if /tmp/smoke_venv/bin/pip install --quiet "proxy-brain==$VERSION"; then
               echo "Install succeeded v$VERSION"
             else
               echo "Install failed — CDN may still be propagating, retrying..."

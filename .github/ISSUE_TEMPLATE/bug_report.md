@@ -24,4 +24,4 @@ paste full traceback here
 **Environment**
 - OS:
 - Python version (`python --version`):
-- okf-generator version (`pip show okf-generator`):
+- proxy-brain version (`pip show proxy-brain`):

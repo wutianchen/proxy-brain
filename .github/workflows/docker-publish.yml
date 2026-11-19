@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: okf-generator
+  IMAGE_NAME: proxy-brain
 
 jobs:
   build:
