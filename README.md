@@ -1,3 +1,5 @@
+> **This is a fork.** `proxy-brain` is a hard fork of [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator) at `5fb73be` (v0.1.53), MIT, with upstream history and attribution intact. See [FORK.md](FORK.md). Internals are still named `okf`.
+
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/UmairBaig8/okf-generator@main/docs/images/okf_banner.jpg" alt="okf-generator" width="700">
 </p>
